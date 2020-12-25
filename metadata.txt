@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=CZML Billboard Maker
+qgisMinimumVersion=3.0
+description=Creates Billboards from a point vector layer.
+version=0.1
+author=Murat Kendir
+email=muratkendir@gmail.com
+
+about=You can convert your point vector layers into a CZML file to visualize them as billboards in Cesium environment by using this QGIS plugin. CZML brief definition from official guide: "CZML is a JSON format for describing a time-dynamic graphical scene, primarily for display in a web browser running Cesium. It describes lines, points, billboards, models, and other graphical primitives, and specifies how they change with time. "* * https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
+
+tracker=https://github.com/muratkendir/CZMLBillboardMaker/issues
+repository=https://github.com/muratkendir/CZMLBillboardMaker
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python czml cesium billboard
+
+homepage=https://github.com/muratkendir/CZMLBillboardMaker
+category=Web
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
