@@ -23,7 +23,8 @@
 """
 from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
-from qgis.PyQt.QtWidgets import QAction
+from qgis.PyQt.QtWidgets import QAction, QFileDialog
+from qgis.core import QgsProject, Qgis
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -179,16 +180,28 @@ class CZMLBillboardMaker:
                 action)
             self.iface.removeToolBarIcon(action)
 
+    def getPointVectorLayers(self):
+        currentLayers = QgsProject.instance().mapLayers()
+        pointLayers = []
+        pointLayerNames = []
+        for layer in currentLayers:
+            if currentLayers.get(layer).geometryType() == 0:
+                pointLayers.append(layer)
+                pointLayerNames.append(currentLayers.get(layer).name())
+        return pointLayerNames
 
     def run(self):
         """Run method that performs all the real work"""
-
+        
         # Create the dialog with elements (after translation) and keep reference
         # Only create GUI ONCE in callback, so that it will only load when the plugin is started
         if self.first_start == True:
             self.first_start = False
             self.dlg = CZMLBillboardMakerDialog()
 
+        #Clear first point based layers combobox, then populate with point layers.
+        self.dlg.comboPointLayerNames.clear()
+        self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop

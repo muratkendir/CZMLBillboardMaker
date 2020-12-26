@@ -46,7 +46,7 @@
     <string>Select Layer:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboPointLayerNames">
    <property name="geometry">
     <rect>
      <x>130</x>
