@@ -49,7 +49,7 @@
   <widget class="QComboBox" name="comboPointLayerNames">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>110</x>
      <y>40</y>
      <width>251</width>
      <height>25</height>
@@ -157,7 +157,7 @@
     <string>height:</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboBoxId">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -167,7 +167,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="comboBoxDescription">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -177,7 +177,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_3">
+  <widget class="QComboBox" name="comboBoxName">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -187,7 +187,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_4">
+  <widget class="QComboBox" name="comboBoxText">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -197,7 +197,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_5">
+  <widget class="QComboBox" name="comboBoxImage">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -207,7 +207,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_6">
+  <widget class="QComboBox" name="comboBoxHeight">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -215,6 +215,19 @@
      <width>150</width>
      <height>25</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonPopAttributes">
+   <property name="geometry">
+    <rect>
+     <x>378</x>
+     <y>40</y>
+     <width>141</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Populate Attributes</string>
    </property>
   </widget>
  </widget>

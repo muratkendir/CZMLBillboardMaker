@@ -68,6 +68,8 @@ class CZMLBillboardMaker:
         # Must be set in initGui() to survive plugin reloads
         self.first_start = None
 
+
+
     # noinspection PyMethodMayBeStatic
     def tr(self, message):
         """Get the translation for a string using Qt translation API.
@@ -190,6 +192,29 @@ class CZMLBillboardMaker:
                 pointLayerNames.append(currentLayers.get(layer).name())
         return pointLayerNames
 
+    def populateAttributes(self):
+        currentLayers = QgsProject.instance().mapLayers()
+        if self.dlg.comboPointLayerNames.currentIndex() != 0:
+            for layer in currentLayers:
+                if currentLayers.get(layer).name() == self.dlg.comboPointLayerNames.currentText():
+                    selectedLayer = currentLayers.get(layer)
+                    print(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxId.clear()
+                    self.dlg.comboBoxId.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxName.clear()
+                    self.dlg.comboBoxName.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxDescription.clear()
+                    self.dlg.comboBoxDescription.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxText.clear()
+                    self.dlg.comboBoxText.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxImage.clear()
+                    self.dlg.comboBoxImage.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxHeight.clear()
+                    self.dlg.comboBoxHeight.addItems(selectedLayer.attributeAliases())
+        else:
+            print('Please select a valid layer.')
+
+
     def run(self):
         """Run method that performs all the real work"""
         
@@ -201,7 +226,13 @@ class CZMLBillboardMaker:
 
         #Clear first point based layers combobox, then populate with point layers.
         self.dlg.comboPointLayerNames.clear()
+        #Set a placeholder text for layer combobox
+        self.dlg.comboPointLayerNames.addItem('Select a point layer')
         self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
+        self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
+
+        self.dlg.pushButtonPopAttributes.clicked.connect(self.populateAttributes)
+        
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
@@ -210,4 +241,5 @@ class CZMLBillboardMaker:
         if result:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
+
             pass

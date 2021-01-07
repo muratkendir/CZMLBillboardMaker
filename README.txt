@@ -1,3 +1,6 @@
+pb_tool deploy
+pyrcc5 -o resources.py resources.qrc
+
 Plugin Builder Results
 
 Your plugin CZMLBillboardMaker was created in:
