@@ -32,14 +32,14 @@
             ]
         }, 
         "label": {
-            "text": "Adiyaman", 
+            "text": "Adıyaman", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "2",
-        "name": "Adiyaman",
+        "name": "Adıyaman",
         "description": "Adıyaman"
     },
     {
@@ -70,14 +70,14 @@
             ]
         }, 
         "label": {
-            "text": "Agri", 
+            "text": "Ağrı", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "4",
-        "name": "Agri",
+        "name": "Ağrı",
         "description": "Ağri|Karaköse"
     },
     {
@@ -203,14 +203,14 @@
             ]
         }, 
         "label": {
-            "text": "Aydin", 
+            "text": "Aydın", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "11",
-        "name": "Aydin",
+        "name": "Aydın",
         "description": "Aydın"
     },
     {
@@ -222,14 +222,14 @@
             ]
         }, 
         "label": {
-            "text": "Balikesir", 
+            "text": "Balıkesir", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "12",
-        "name": "Balikesir",
+        "name": "Balıkesir",
         "description": "Balıkesir|Balikisri"
     },
     {
@@ -431,14 +431,14 @@
             ]
         }, 
         "label": {
-            "text": "Çankiri", 
+            "text": "Çankırı", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "23",
-        "name": "Çankiri",
+        "name": "Çankırı",
         "description": "Çankırı|Changra"
     },
     {
@@ -488,14 +488,14 @@
             ]
         }, 
         "label": {
-            "text": "Diyarbakir", 
+            "text": "Diyarbakır", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "26",
-        "name": "Diyarbakir",
+        "name": "Diyarbakır",
         "description": "Diyarbakır"
     },
     {
@@ -602,14 +602,14 @@
             ]
         }, 
         "label": {
-            "text": "Eskisehir", 
+            "text": "Eskişehir", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "32",
-        "name": "Eskisehir",
+        "name": "Eskişehir",
         "description": "Eskişehir"
     },
     {
@@ -659,14 +659,14 @@
             ]
         }, 
         "label": {
-            "text": "Gümüshane", 
+            "text": "Gümüşhane", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "35",
-        "name": "Gümüshane",
+        "name": "Gümüşhane",
         "description": "Gümüşhane"
     },
     {
@@ -754,14 +754,14 @@
             ]
         }, 
         "label": {
-            "text": "Istanbul", 
+            "text": "İstanbul", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "40",
-        "name": "Istanbul",
+        "name": "İstanbul",
         "description": "İstanbul|Constantinople|Estambul|Istambul|Konstantinopel|Stamboul"
     },
     {
@@ -773,14 +773,14 @@
             ]
         }, 
         "label": {
-            "text": "Izmir", 
+            "text": "İzmir", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "41",
-        "name": "Izmir",
+        "name": "İzmir",
         "description": "İzmir|Esmirna|Smirne|Smyrna"
     },
     {
@@ -792,14 +792,14 @@
             ]
         }, 
         "label": {
-            "text": "K. Maras", 
+            "text": "K. Maraş", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "42",
-        "name": "K. Maras",
+        "name": "K. Maraş",
         "description": "Kahramanmaraş"
     },
     {
@@ -925,14 +925,14 @@
             ]
         }, 
         "label": {
-            "text": "Kinkkale", 
+            "text": "Kırıkkale", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "49",
-        "name": "Kinkkale",
+        "name": "Kırıkkale",
         "description": "Kırıkkale"
     },
     {
@@ -944,14 +944,14 @@
             ]
         }, 
         "label": {
-            "text": "Kirklareli", 
+            "text": "Kırklareli", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "50",
-        "name": "Kirklareli",
+        "name": "Kırklareli",
         "description": "Kırklareli"
     },
     {
@@ -963,14 +963,14 @@
             ]
         }, 
         "label": {
-            "text": "Kirsehir", 
+            "text": "Kırşehir", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "51",
-        "name": "Kirsehir",
+        "name": "Kırşehir",
         "description": "Kırşehir"
     },
     {
@@ -1115,14 +1115,14 @@
             ]
         }, 
         "label": {
-            "text": "Mugla", 
+            "text": "Muğla", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "59",
-        "name": "Mugla",
+        "name": "Muğla",
         "description": "Muğla"
     },
     {
@@ -1134,14 +1134,14 @@
             ]
         }, 
         "label": {
-            "text": "Mus", 
+            "text": "Muş", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "60",
-        "name": "Mus",
+        "name": "Muş",
         "description": "Muş"
     },
     {
@@ -1153,14 +1153,14 @@
             ]
         }, 
         "label": {
-            "text": "Nevsehir", 
+            "text": "Nevşehir", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "61",
-        "name": "Nevsehir",
+        "name": "Nevşehir",
         "description": "Nevşehir"
     },
     {
@@ -1172,14 +1172,14 @@
             ]
         }, 
         "label": {
-            "text": "Nigde", 
+            "text": "Niğde", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "62",
-        "name": "Nigde",
+        "name": "Niğde",
         "description": "Niğde"
     },
     {
@@ -1286,14 +1286,14 @@
             ]
         }, 
         "label": {
-            "text": "Sanliurfa", 
+            "text": "Şanlıurfa", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "68",
-        "name": "Sanliurfa",
+        "name": "Şanlıurfa",
         "description": "Şanlıurfa|Urfa"
     },
     {
@@ -1343,14 +1343,14 @@
             ]
         }, 
         "label": {
-            "text": "Sirnak", 
+            "text": "Şırnak", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "71",
-        "name": "Sirnak",
+        "name": "Şırnak",
         "description": "Şırnak"
     },
     {
@@ -1381,14 +1381,14 @@
             ]
         }, 
         "label": {
-            "text": "Tekirdag", 
+            "text": "Tekirdağ", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "73",
-        "name": "Tekirdag",
+        "name": "Tekirdağ",
         "description": "Tekirdağ"
     },
     {
@@ -1457,14 +1457,14 @@
             ]
         }, 
         "label": {
-            "text": "Usak", 
+            "text": "Uşak", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "77",
-        "name": "Usak",
+        "name": "Uşak",
         "description": "Uşak"
     },
     {
@@ -1533,14 +1533,14 @@
             ]
         }, 
         "label": {
-            "text": "Zinguldak", 
+            "text": "Zonguldak", 
             "fillColor": {"rgba": [255,255,255,255]},
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
         },
         "id": "81",
-        "name": "Zinguldak",
+        "name": "Zonguldak",
         "description": "Zonguldak"
     }
 ]

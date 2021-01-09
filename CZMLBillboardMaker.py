@@ -188,7 +188,7 @@ class CZMLBillboardMaker:
         pointLayers = []
         pointLayerNames = []
         for layer in currentLayers:
-            if currentLayers.get(layer).geometryType() == 0:
+            if currentLayers.get(layer).type().value == 0 and currentLayers.get(layer).geometryType() == 0:
                 pointLayers.append(layer)
                 pointLayerNames.append(currentLayers.get(layer).name())
         return pointLayerNames
@@ -200,7 +200,7 @@ class CZMLBillboardMaker:
             for layer in currentLayers:
                 if currentLayers.get(layer).name() == self.dlg.comboPointLayerNames.currentText():
                     selectedLayer = currentLayers.get(layer)
-                    print(selectedLayer.attributeAliases())
+                    #print(selectedLayer.attributeAliases())
                     self.dlg.comboBoxId.clear()
                     self.dlg.comboBoxId.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxName.clear()
@@ -261,7 +261,7 @@ class CZMLBillboardMaker:
                         selectedLayer = currentLayers.get(layer)
             layerName = selectedLayer.name()
             layerCrs = selectedLayer.sourceCrs()
-            print(layerCrs)
+            #print(layerCrs)
             
             #Take selected fields from attributes combobox.
             selectedHeightField = self.dlg.comboBoxHeight.currentText()
@@ -270,7 +270,7 @@ class CZMLBillboardMaker:
             selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
 
             
-            exportedFile = open(fileURL, 'w')
+            exportedFile = open(fileURL, 'w', encoding='utf-8')
 
             #Writes beginning of CZML document and layer name as document name.
             beginningLines = '[\n    {\n        "version": "1.0", \n        "id": "document", \n        "name": "'+ layerName +'"\n    }'
@@ -300,6 +300,7 @@ class CZMLBillboardMaker:
                 
 
             wholeDocument = beginningLines + featureLines + '\n]'
+
             exportedFile.write(wholeDocument)
             exportedFile.close()
 
