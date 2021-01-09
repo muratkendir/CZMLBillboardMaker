@@ -49,9 +49,9 @@
   <widget class="QComboBox" name="comboPointLayerNames">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>120</x>
      <y>40</y>
-     <width>251</width>
+     <width>230</width>
      <height>25</height>
     </rect>
    </property>
@@ -59,9 +59,9 @@
   <widget class="QLineEdit" name="lineEditFileName">
    <property name="geometry">
     <rect>
-     <x>261</x>
+     <x>110</x>
      <y>250</y>
-     <width>251</width>
+     <width>301</width>
      <height>25</height>
     </rect>
    </property>
@@ -69,8 +69,8 @@
   <widget class="QLabel" name="labelFileName">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>250</y>
+     <x>20</x>
+     <y>255</y>
      <width>91</width>
      <height>20</height>
     </rect>
@@ -220,7 +220,7 @@
   <widget class="QPushButton" name="pushButtonPopAttributes">
    <property name="geometry">
     <rect>
-     <x>378</x>
+     <x>370</x>
      <y>40</y>
      <width>141</width>
      <height>25</height>
@@ -228,6 +228,19 @@
    </property>
    <property name="text">
     <string>Populate Attributes</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButtonBrowse">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>250</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Browse</string>
    </property>
   </widget>
  </widget>

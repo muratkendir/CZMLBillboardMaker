@@ -182,6 +182,7 @@ class CZMLBillboardMaker:
                 action)
             self.iface.removeToolBarIcon(action)
 
+    #Get only vector layers with point geometry.
     def getPointVectorLayers(self):
         currentLayers = QgsProject.instance().mapLayers()
         pointLayers = []
@@ -192,6 +193,7 @@ class CZMLBillboardMaker:
                 pointLayerNames.append(currentLayers.get(layer).name())
         return pointLayerNames
 
+    #Read layer attributes and populate attribute comboxes with them.
     def populateAttributes(self):
         currentLayers = QgsProject.instance().mapLayers()
         if self.dlg.comboPointLayerNames.currentIndex() != 0:
@@ -214,6 +216,12 @@ class CZMLBillboardMaker:
         else:
             print('Please select a valid layer.')
 
+    #Selecting filename for export czml file
+    def browseForFileName(self):
+        fileName = QFileDialog.getSaveFileName(self.dlg, "Select output file ","", '*.czml')
+        fileURL = fileName[0] + '.czml'
+        self.dlg.lineEditFileName.setText(fileURL)
+        
 
     def run(self):
         """Run method that performs all the real work"""
@@ -233,6 +241,8 @@ class CZMLBillboardMaker:
 
         self.dlg.pushButtonPopAttributes.clicked.connect(self.populateAttributes)
         
+        self.dlg.lineEditFileName.clear()
+        self.dlg.pushButtonBrowse.clicked.connect(self.browseForFileName)
         # show the dialog
         self.dlg.show()
         # Run the dialog event loop
@@ -241,5 +251,48 @@ class CZMLBillboardMaker:
         if result:
             # Do something useful here - delete the line containing pass and
             # substitute with your code.
+            fileURL = self.dlg.lineEditFileName.text()
+            
+            #Take Selected layer from current QGIS canvas.
+            currentLayers = QgsProject.instance().mapLayers()
+            if self.dlg.comboPointLayerNames.currentIndex() != 0:
+                for layer in currentLayers:
+                    if currentLayers.get(layer).name() == self.dlg.comboPointLayerNames.currentText():
+                        selectedLayer = currentLayers.get(layer)
+            layerName = selectedLayer.name()
+            layerCrs = selectedLayer.sourceCrs()
+            print(layerCrs)
+            
+            #Take selected fields from attributes combobox.
+            selectedHeightField = self.dlg.comboBoxHeight.currentText()
+            selectedIdField = self.dlg.comboBoxId.currentText()
+            selectedNameField = self.dlg.comboBoxName.currentText()
+            selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
+
+            
+            exportedFile = open(fileURL, 'w')
+
+            #Writes beginning of CZML document and layer name as document name.
+            beginningLines = '[\n    {\n        "version": "1.0", \n        "id": "document", \n        "name": "'+ layerName +'"\n    },\n'
+
+            exportedFile.write(beginningLines)
+
+            for feature in selectedLayer.getFeatures():
+                print(
+                    feature.attribute(selectedIdField),
+                    '\n',
+                    feature.attribute(selectedNameField),
+                    '\n',
+                    feature.attribute(selectedDescriptionField),
+                    '\n',
+                    feature.attribute(selectedHeightField),
+                    '\n',
+                    round(feature.geometry().asPoint().x(),7),
+                    '\n',
+                    round(feature.geometry().asPoint().y(),7),
+                    '\n',
+                    )
+
+            exportedFile.close()
 
             pass
