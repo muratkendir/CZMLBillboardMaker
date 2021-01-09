@@ -273,26 +273,34 @@ class CZMLBillboardMaker:
             exportedFile = open(fileURL, 'w')
 
             #Writes beginning of CZML document and layer name as document name.
-            beginningLines = '[\n    {\n        "version": "1.0", \n        "id": "document", \n        "name": "'+ layerName +'"\n    },\n'
-
-            exportedFile.write(beginningLines)
+            beginningLines = '[\n    {\n        "version": "1.0", \n        "id": "document", \n        "name": "'+ layerName +'"\n    }'
+            featureLines = ''
 
             for feature in selectedLayer.getFeatures():
-                print(
-                    feature.attribute(selectedIdField),
-                    '\n',
-                    feature.attribute(selectedNameField),
-                    '\n',
-                    feature.attribute(selectedDescriptionField),
-                    '\n',
-                    feature.attribute(selectedHeightField),
-                    '\n',
-                    round(feature.geometry().asPoint().x(),7),
-                    '\n',
-                    round(feature.geometry().asPoint().y(),7),
-                    '\n',
-                    )
+                positionLines = ',\n    {\n        "position": {\n            "cartographicDegrees": [\n                "'
+                positionLines = positionLines + str(round(feature.geometry().asPoint().x(),7))
+                positionLines = positionLines + '", \n                "'
+                positionLines = positionLines + str(round(feature.geometry().asPoint().y(),7))
+                positionLines = positionLines + '", \n                '
+                positionLines = positionLines + str(feature.attribute(selectedHeightField))
+                labelLines = '\n            ]\n        }, \n        "label": {\n            "text": "'
+                labelLines = labelLines + str(feature.attribute(selectedNameField))
+                labelLines = labelLines + '", \n            "fillColor": {"rgba": [255,255,255,255]},\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
+                idLines = '        "id": "'
+                idLines = idLines + str(feature.attribute(selectedIdField))
+                idLines = idLines + '",\n'
+                nameLines = '        "name": "'
+                nameLines = nameLines + str(feature.attribute(selectedNameField))
+                nameLines = nameLines + '",\n'
+                descriptionLines = '        "description": "'
+                descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
+                descriptionLines = descriptionLines + '"\n    }'
+                
+                featureLines = featureLines + positionLines + labelLines + idLines + nameLines + descriptionLines
+                
 
+            wholeDocument = beginningLines + featureLines + '\n]'
+            exportedFile.write(wholeDocument)
             exportedFile.close()
 
             pass
