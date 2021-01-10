@@ -268,6 +268,7 @@ class CZMLBillboardMaker:
             selectedIdField = self.dlg.comboBoxId.currentText()
             selectedNameField = self.dlg.comboBoxName.currentText()
             selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
+            selectedImageField = self.dlg.comboBoxImage.currentText()
 
             
             exportedFile = open(fileURL, 'w', encoding='utf-8')
@@ -285,7 +286,10 @@ class CZMLBillboardMaker:
                 positionLines = positionLines + str(feature.attribute(selectedHeightField))
                 labelLines = '\n            ]\n        }, \n        "label": {\n            "text": "'
                 labelLines = labelLines + str(feature.attribute(selectedNameField))
-                labelLines = labelLines + '", \n            "fillColor": {"rgba": [255,255,255,255]},\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
+                labelLines = labelLines + '", \n            "fillColor": {"rgba": [255,255,255,255]},\n"            disableDepthTestDistance": 500000,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
+                billboardLines = '        "billboard": {\n            "image": [\n                {\n                    "uri": "'
+                billboardLines = billboardLines + str(feature.attribute(selectedImageField))
+                billboardLines = billboardLines + '"\n                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        },\n'
                 idLines = '        "id": "'
                 idLines = idLines + str(feature.attribute(selectedIdField))
                 idLines = idLines + '",\n'
@@ -296,7 +300,7 @@ class CZMLBillboardMaker:
                 descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
                 descriptionLines = descriptionLines + '"\n    }'
                 
-                featureLines = featureLines + positionLines + labelLines + idLines + nameLines + descriptionLines
+                featureLines = featureLines + positionLines + labelLines + billboardLines + idLines + nameLines + descriptionLines
                 
 
             wholeDocument = beginningLines + featureLines + '\n]'

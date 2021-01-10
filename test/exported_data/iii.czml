@@ -15,9 +15,22 @@
         "label": {
             "text": "Adana", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 500000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "1",
         "name": "Adana",
@@ -34,9 +47,22 @@
         "label": {
             "text": "Adıyaman", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "2",
         "name": "Adıyaman",
@@ -53,9 +79,22 @@
         "label": {
             "text": "Afyon", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "3",
         "name": "Afyon",
@@ -72,9 +111,22 @@
         "label": {
             "text": "Ağrı", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "4",
         "name": "Ağrı",
@@ -91,9 +143,22 @@
         "label": {
             "text": "Aksaray", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "5",
         "name": "Aksaray",
@@ -110,9 +175,22 @@
         "label": {
             "text": "Amasya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "6",
         "name": "Amasya",
@@ -129,9 +207,22 @@
         "label": {
             "text": "Ankara", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "7",
         "name": "Ankara",
@@ -148,9 +239,22 @@
         "label": {
             "text": "Antalya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "8",
         "name": "Antalya",
@@ -167,9 +271,22 @@
         "label": {
             "text": "Ardahan", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "9",
         "name": "Ardahan",
@@ -186,9 +303,22 @@
         "label": {
             "text": "Artvin", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "10",
         "name": "Artvin",
@@ -205,9 +335,22 @@
         "label": {
             "text": "Aydın", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "11",
         "name": "Aydın",
@@ -224,9 +367,22 @@
         "label": {
             "text": "Balıkesir", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "12",
         "name": "Balıkesir",
@@ -243,9 +399,22 @@
         "label": {
             "text": "Bartın", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "13",
         "name": "Bartın",
@@ -262,9 +431,22 @@
         "label": {
             "text": "Batman", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "14",
         "name": "Batman",
@@ -281,9 +463,22 @@
         "label": {
             "text": "Bayburt", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "15",
         "name": "Bayburt",
@@ -300,9 +495,22 @@
         "label": {
             "text": "Bilecik", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "16",
         "name": "Bilecik",
@@ -319,9 +527,22 @@
         "label": {
             "text": "Bingöl", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "17",
         "name": "Bingöl",
@@ -338,9 +559,22 @@
         "label": {
             "text": "Bitlis", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "18",
         "name": "Bitlis",
@@ -357,9 +591,22 @@
         "label": {
             "text": "Bolu", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "19",
         "name": "Bolu",
@@ -376,9 +623,22 @@
         "label": {
             "text": "Burdur", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "20",
         "name": "Burdur",
@@ -395,9 +655,22 @@
         "label": {
             "text": "Bursa", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "21",
         "name": "Bursa",
@@ -414,9 +687,22 @@
         "label": {
             "text": "Çanakkale", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "22",
         "name": "Çanakkale",
@@ -433,9 +719,22 @@
         "label": {
             "text": "Çankırı", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "23",
         "name": "Çankırı",
@@ -452,9 +751,22 @@
         "label": {
             "text": "Çorum", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "24",
         "name": "Çorum",
@@ -471,9 +783,22 @@
         "label": {
             "text": "Denizli", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "25",
         "name": "Denizli",
@@ -490,9 +815,22 @@
         "label": {
             "text": "Diyarbakır", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "26",
         "name": "Diyarbakır",
@@ -509,9 +847,22 @@
         "label": {
             "text": "Düzce", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "27",
         "name": "Düzce",
@@ -528,9 +879,22 @@
         "label": {
             "text": "Edirne", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "28",
         "name": "Edirne",
@@ -547,9 +911,22 @@
         "label": {
             "text": "Elazığ", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "29",
         "name": "Elazığ",
@@ -566,9 +943,22 @@
         "label": {
             "text": "Erzincan", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "30",
         "name": "Erzincan",
@@ -585,9 +975,22 @@
         "label": {
             "text": "Erzurum", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "31",
         "name": "Erzurum",
@@ -604,9 +1007,22 @@
         "label": {
             "text": "Eskişehir", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "32",
         "name": "Eskişehir",
@@ -623,9 +1039,22 @@
         "label": {
             "text": "Gaziantep", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "33",
         "name": "Gaziantep",
@@ -642,9 +1071,22 @@
         "label": {
             "text": "Giresun", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "34",
         "name": "Giresun",
@@ -661,9 +1103,22 @@
         "label": {
             "text": "Gümüşhane", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "35",
         "name": "Gümüşhane",
@@ -680,9 +1135,22 @@
         "label": {
             "text": "Hakkari", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "36",
         "name": "Hakkari",
@@ -699,9 +1167,22 @@
         "label": {
             "text": "Hatay", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "37",
         "name": "Hatay",
@@ -718,9 +1199,22 @@
         "label": {
             "text": "Iğdır", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "38",
         "name": "Iğdır",
@@ -737,9 +1231,22 @@
         "label": {
             "text": "Isparta", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "39",
         "name": "Isparta",
@@ -756,9 +1263,22 @@
         "label": {
             "text": "İstanbul", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/superman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "40",
         "name": "İstanbul",
@@ -775,9 +1295,22 @@
         "label": {
             "text": "İzmir", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "41",
         "name": "İzmir",
@@ -794,9 +1327,22 @@
         "label": {
             "text": "K. Maraş", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "42",
         "name": "K. Maraş",
@@ -813,9 +1359,22 @@
         "label": {
             "text": "Karabük", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "43",
         "name": "Karabük",
@@ -832,9 +1391,22 @@
         "label": {
             "text": "Karaman", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "44",
         "name": "Karaman",
@@ -851,9 +1423,22 @@
         "label": {
             "text": "Kars", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "45",
         "name": "Kars",
@@ -870,9 +1455,22 @@
         "label": {
             "text": "Kastamonu", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "46",
         "name": "Kastamonu",
@@ -889,9 +1487,22 @@
         "label": {
             "text": "Kayseri", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "47",
         "name": "Kayseri",
@@ -908,9 +1519,22 @@
         "label": {
             "text": "Kilis", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "48",
         "name": "Kilis",
@@ -927,9 +1551,22 @@
         "label": {
             "text": "Kırıkkale", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "49",
         "name": "Kırıkkale",
@@ -946,9 +1583,22 @@
         "label": {
             "text": "Kırklareli", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "50",
         "name": "Kırklareli",
@@ -965,9 +1615,22 @@
         "label": {
             "text": "Kırşehir", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "51",
         "name": "Kırşehir",
@@ -984,9 +1647,22 @@
         "label": {
             "text": "Kocaeli", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "52",
         "name": "Kocaeli",
@@ -1003,9 +1679,22 @@
         "label": {
             "text": "Konya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "53",
         "name": "Konya",
@@ -1022,9 +1711,22 @@
         "label": {
             "text": "Kütahya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "54",
         "name": "Kütahya",
@@ -1041,9 +1743,22 @@
         "label": {
             "text": "Malatya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "55",
         "name": "Malatya",
@@ -1060,9 +1775,22 @@
         "label": {
             "text": "Manisa", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "56",
         "name": "Manisa",
@@ -1079,9 +1807,22 @@
         "label": {
             "text": "Mardin", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "57",
         "name": "Mardin",
@@ -1098,9 +1839,22 @@
         "label": {
             "text": "Mersin", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "58",
         "name": "Mersin",
@@ -1117,9 +1871,22 @@
         "label": {
             "text": "Muğla", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "59",
         "name": "Muğla",
@@ -1136,9 +1903,22 @@
         "label": {
             "text": "Muş", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "60",
         "name": "Muş",
@@ -1155,9 +1935,22 @@
         "label": {
             "text": "Nevşehir", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "61",
         "name": "Nevşehir",
@@ -1174,9 +1967,22 @@
         "label": {
             "text": "Niğde", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "62",
         "name": "Niğde",
@@ -1193,9 +1999,22 @@
         "label": {
             "text": "Ordu", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "63",
         "name": "Ordu",
@@ -1212,9 +2031,22 @@
         "label": {
             "text": "Osmaniye", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "64",
         "name": "Osmaniye",
@@ -1231,9 +2063,22 @@
         "label": {
             "text": "Rize", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "65",
         "name": "Rize",
@@ -1250,9 +2095,22 @@
         "label": {
             "text": "Sakarya", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "66",
         "name": "Sakarya",
@@ -1269,9 +2127,22 @@
         "label": {
             "text": "Samsun", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "67",
         "name": "Samsun",
@@ -1288,9 +2159,22 @@
         "label": {
             "text": "Şanlıurfa", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "68",
         "name": "Şanlıurfa",
@@ -1307,9 +2191,22 @@
         "label": {
             "text": "Siirt", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "69",
         "name": "Siirt",
@@ -1326,9 +2223,22 @@
         "label": {
             "text": "Sinop", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "70",
         "name": "Sinop",
@@ -1345,9 +2255,22 @@
         "label": {
             "text": "Şırnak", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "71",
         "name": "Şırnak",
@@ -1364,9 +2287,22 @@
         "label": {
             "text": "Sivas", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "72",
         "name": "Sivas",
@@ -1383,9 +2319,22 @@
         "label": {
             "text": "Tekirdağ", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "73",
         "name": "Tekirdağ",
@@ -1402,9 +2351,22 @@
         "label": {
             "text": "Tokat", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "74",
         "name": "Tokat",
@@ -1421,9 +2383,22 @@
         "label": {
             "text": "Trabzon", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "75",
         "name": "Trabzon",
@@ -1440,9 +2415,22 @@
         "label": {
             "text": "Tunceli", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "76",
         "name": "Tunceli",
@@ -1459,9 +2447,22 @@
         "label": {
             "text": "Uşak", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "77",
         "name": "Uşak",
@@ -1478,9 +2479,22 @@
         "label": {
             "text": "Van", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "78",
         "name": "Van",
@@ -1497,9 +2511,22 @@
         "label": {
             "text": "Yalova", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "79",
         "name": "Yalova",
@@ -1516,9 +2543,22 @@
         "label": {
             "text": "Yozgat", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "80",
         "name": "Yozgat",
@@ -1535,9 +2575,22 @@
         "label": {
             "text": "Zonguldak", 
             "fillColor": {"rgba": [255,255,255,255]},
+"            disableDepthTestDistance": 200000,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
+        },
+        "billboard": {
+            "image": [
+                {
+                    "uri": "czml_image_folder/batman.png"
+                }
+            ],
+            "scale": 1.0,
+            "heightReference": "RELATIVE_TO_GROUND",
+            "pixelOffset": {
+                "cartesian2": [0, -50]
+                }
         },
         "id": "81",
         "name": "Zonguldak",
