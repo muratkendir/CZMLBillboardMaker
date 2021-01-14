@@ -25,6 +25,9 @@ from qgis.PyQt.QtCore import QSettings, QTranslator, QCoreApplication
 from qgis.PyQt.QtGui import QIcon
 from qgis.PyQt.QtWidgets import QAction, QFileDialog
 from qgis.core import QgsProject, Qgis
+import datetime
+from pytz import timezone
+import pytz
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -213,6 +216,13 @@ class CZMLBillboardMaker:
                     self.dlg.comboBoxImage.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxHeight.clear()
                     self.dlg.comboBoxHeight.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxTimeBeginning.clear()
+                    self.dlg.comboBoxTimeBeginning.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxTimeEnd.clear()
+                    self.dlg.comboBoxTimeEnd.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxTimeZone.clear()
+                    self.dlg.comboBoxTimeZone.addItems(pytz.all_timezones)
+                    
         else:
             print('Please select a valid layer.')
 
@@ -268,8 +278,15 @@ class CZMLBillboardMaker:
             selectedIdField = self.dlg.comboBoxId.currentText()
             selectedNameField = self.dlg.comboBoxName.currentText()
             selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
+            selectedTextField = self.dlg.comboBoxText.currentText()
             selectedImageField = self.dlg.comboBoxImage.currentText()
+            selectedTimeBeginningField = self.dlg.comboBoxTimeBeginning.currentText()
+            selectedTimeEndField = self.dlg.comboBoxTimeEnd.currentText()
+            selectedTimeZone = self.dlg.comboBoxTimeZone.currentText()
+            timeZone = timezone(self.dlg.comboBoxTimeZone.currentText())
+            dateTimeFormat = fmt = '%Y-%m-%dT%H:%M:%S%z'
 
+            
             
             exportedFile = open(fileURL, 'w', encoding='utf-8')
 
@@ -278,6 +295,15 @@ class CZMLBillboardMaker:
             featureLines = ''
 
             for feature in selectedLayer.getFeatures():
+                #if time interval selected, datetime attribute selected and localized by selected time zone.
+                #beginning and end localized datetime will be added to label and billboard objects.
+                beginningDateTime =  feature.attribute(selectedTimeBeginningField)
+                endDateTime =  feature.attribute(selectedTimeEndField)
+                pyBeginningDateTime = beginningDateTime.toPyDateTime()
+                pyEndDateTime = endDateTime.toPyDateTime()
+                beginningLocalDateTime = (timeZone.localize(pyBeginningDateTime)).isoformat()
+                endLocalDateTime = (timeZone.localize(pyEndDateTime)).isoformat()
+
                 positionLines = ',\n    {\n        "position": {\n            "cartographicDegrees": [\n                "'
                 positionLines = positionLines + str(round(feature.geometry().asPoint().x(),7))
                 positionLines = positionLines + '", \n                "'
@@ -285,11 +311,15 @@ class CZMLBillboardMaker:
                 positionLines = positionLines + '", \n                '
                 positionLines = positionLines + str(feature.attribute(selectedHeightField))
                 labelLines = '\n            ]\n        }, \n        "label": {\n            "text": "'
-                labelLines = labelLines + str(feature.attribute(selectedNameField))
-                labelLines = labelLines + '", \n            "fillColor": {"rgba": [255,255,255,255]},\n"            disableDepthTestDistance": 500000,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
+                labelLines = labelLines + str(feature.attribute(selectedTextField))
+                labelLines = labelLines + '",\n'
+                labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
+                labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "disableDepthTestDistance": 500000,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
                 billboardLines = '        "billboard": {\n            "image": [\n                {\n                    "uri": "'
                 billboardLines = billboardLines + str(feature.attribute(selectedImageField))
-                billboardLines = billboardLines + '"\n                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        },\n'
+                billboardLines = billboardLines + '",\n'
+                billboardLines = billboardLines + '                "interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
+                billboardLines = billboardLines + '                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        },\n'
                 idLines = '        "id": "'
                 idLines = idLines + str(feature.attribute(selectedIdField))
                 idLines = idLines + '",\n'
@@ -299,6 +329,11 @@ class CZMLBillboardMaker:
                 descriptionLines = '        "description": "'
                 descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
                 descriptionLines = descriptionLines + '"\n    }'
+
+                #print(feature.attribute(selectedTimeBeginningField).toString('yyyy-MM-ddThh:mm:sszz'))
+                #print(feature.attribute(selectedTimeEndField).toString('yyyy-MM-ddThh:mm:ss'))
+                #print(selectedTimeZone)
+
                 
                 featureLines = featureLines + positionLines + labelLines + billboardLines + idLines + nameLines + descriptionLines
                 
