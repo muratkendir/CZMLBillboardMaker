@@ -1,12 +1,12 @@
 ### Hi, I'm Murat Kendir
 ## Geomatic Engineer / GIS Developer
 [![Website](https://img.shields.io/youtube/comments/-OQNriGf0PE?style=social)](https://www.youtube.com/watch?v=-OQNriGf0PE)
-## Your short description
+## Short Description
 - 🔭 I’m currently working on - Python, CesiumJS, PostGIS, FME
 - 🌱 I’m currently learning - Django
 - 👯 I’m looking to collaborate with - GIS Developers
 
-##CZML Bilboard Maker
+## CZML Bilboard Maker
 1) Simply select a point vector layer.
 2) Give neccessary attributes as CZML file objects.
 3) If you want to configure time sequence in CZML file you can configure in 2nd tab.
