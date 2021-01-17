@@ -19,6 +19,7 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
     shouldAnimate: true
 });
 ```
+## NOTE: If you confused with your billboard layer, simply look at weather_turkey geopackage file in sample_project folder.
 ![Explanation of Attributes](/attributes_info.png)
 
 <!-- Also feel free to update second URL to any URL -->
