@@ -2,7 +2,14 @@
     {
         "version": "1.0", 
         "id": "document", 
-        "name": "weather_turkey"
+        "name": "weather_turkey",
+        "clock": {
+            "interval": "2021-01-15T00:00:00+03:00/2021-01-19T23:59:00+03:00",
+            "currentTime": "2021-01-15T00:00:00+03:00",
+            "multiplier": 25000,
+            "range": "LOOP_STOP",
+            "step": "SYSTEM_CLOCK_MULTIPLIER"
+        }
     },
     {
         "position": {
@@ -16,7 +23,9 @@
             "text": "Ankara : -4.5 / 3deg",
             "interval": "2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -24,7 +33,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snowy01.png",
+                "uri": "czml_image_folder/snowy01.png",
                 "interval":"2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00"
                 }
             ],
@@ -50,7 +59,9 @@
             "text": "İstanbul : 3.3 / 8.4deg",
             "interval": "2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -58,7 +69,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snowy01.png",
+                "uri": "czml_image_folder/snowy01.png",
                 "interval":"2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00"
                 }
             ],
@@ -84,7 +95,9 @@
             "text": "İzmir : 5.1 / 11.6deg",
             "interval": "2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -92,7 +105,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/rainy04.png",
+                "uri": "czml_image_folder/rainy04.png",
                 "interval":"2021-01-15T00:00:00+03:00/2021-01-15T23:59:59+03:00"
                 }
             ],
@@ -118,7 +131,9 @@
             "text": "Ankara : -4.4 / 3.2deg",
             "interval": "2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -126,7 +141,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/mostly_cloudly05.svg",
+                "uri": "czml_image_folder/mostly_cloudly05.svg",
                 "interval":"2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00"
                 }
             ],
@@ -152,7 +167,9 @@
             "text": "Ankara : -4.5 / 3.5deg",
             "interval": "2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -160,7 +177,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snowy01.png",
+                "uri": "czml_image_folder/snowy01.png",
                 "interval":"2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00"
                 }
             ],
@@ -186,7 +203,9 @@
             "text": "Ankara : -4.2 / 3.7deg",
             "interval": "2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -194,7 +213,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snow_flurrly06.png",
+                "uri": "czml_image_folder/snow_flurrly06.png",
                 "interval":"2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00"
                 }
             ],
@@ -220,7 +239,9 @@
             "text": "Ankara : -3.5 / 3.4deg",
             "interval": "2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -228,7 +249,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/partly_cloudly03.png",
+                "uri": "czml_image_folder/partly_cloudly03.png",
                 "interval":"2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00"
                 }
             ],
@@ -254,7 +275,9 @@
             "text": "İstanbul : 3.4 / 8.6deg",
             "interval": "2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -262,7 +285,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snowy01.png",
+                "uri": "czml_image_folder/snowy01.png",
                 "interval":"2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00"
                 }
             ],
@@ -288,7 +311,9 @@
             "text": "İstanbul : 3.4 / 8.7deg",
             "interval": "2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -296,7 +321,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/heavy_snowy02.png",
+                "uri": "czml_image_folder/heavy_snowy02.png",
                 "interval":"2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00"
                 }
             ],
@@ -322,7 +347,9 @@
             "text": "İstanbul : 3.7 / 8.7deg",
             "interval": "2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -330,7 +357,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/snowy01.png",
+                "uri": "czml_image_folder/snowy01.png",
                 "interval":"2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00"
                 }
             ],
@@ -356,7 +383,9 @@
             "text": "İstanbul : 3.7 / 9.2deg",
             "interval": "2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -364,7 +393,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/partly_cloudly03.png",
+                "uri": "czml_image_folder/partly_cloudly03.png",
                 "interval":"2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00"
                 }
             ],
@@ -390,7 +419,9 @@
             "text": "İzmir : 4.7 / 11.4deg",
             "interval": "2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -398,7 +429,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/rainy04.png",
+                "uri": "czml_image_folder/rainy04.png",
                 "interval":"2021-01-16T00:00:00+03:00/2021-01-16T23:59:59+03:00"
                 }
             ],
@@ -424,7 +455,9 @@
             "text": "İzmir : 4.7 / 11.5deg",
             "interval": "2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -432,7 +465,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/mostly_cloudly05.png",
+                "uri": "czml_image_folder/mostly_cloudly05.png",
                 "interval":"2021-01-17T00:00:00+03:00/2021-01-17T23:59:59+03:00"
                 }
             ],
@@ -458,7 +491,9 @@
             "text": "İzmir : 4.9 / 11.6deg",
             "interval": "2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -466,7 +501,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/mostly_cloudly05.png",
+                "uri": "czml_image_folder/mostly_cloudly05.png",
                 "interval":"2021-01-18T00:00:00+03:00/2021-01-18T23:59:59+03:00"
                 }
             ],
@@ -492,7 +527,9 @@
             "text": "İzmir : 5.3 / 11.8deg",
             "interval": "2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00",
             "fillColor": {"rgba": [255,255,255,255]},
-            "disableDepthTestDistance": 500000,
+            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },
+            "disableDepthTestDistance": 9999999999,
+            "outlineWidth": 3,
             "outlineColor": {"rgba": [0, 0, 0, 255]}, 
             "style": "FILL_AND_OUTLINE", 
             "heightReference": "RELATIVE_TO_GROUND"
@@ -500,7 +537,7 @@
         "billboard": {
             "image": [
                 {
-                    "uri": "czml_image_folder/mostly_cloudly05.png",
+                "uri": "czml_image_folder/mostly_cloudly05.png",
                 "interval":"2021-01-19T00:00:00+03:00/2021-01-19T23:59:59+03:00"
                 }
             ],

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>528</width>
-    <height>335</height>
+    <width>599</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,303 +17,689 @@
    <iconset>
     <normaloff>icon.png</normaloff>icon.png</iconset>
   </property>
-  <widget class="QDialogButtonBox" name="button_box">
+  <widget class="QTabWidget" name="tabWidget">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>290</y>
-     <width>341</width>
-     <height>32</height>
+     <x>0</x>
+     <y>0</y>
+     <width>601</width>
+     <height>481</height>
     </rect>
    </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   <property name="currentIndex">
+    <number>0</number>
    </property>
-  </widget>
-  <widget class="QLabel" name="labelSelectLayer">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>41</y>
-     <width>91</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Select Layer:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboPointLayerNames">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>40</y>
-     <width>230</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEditFileName">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>250</y>
-     <width>301</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelFileName">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>255</y>
-     <width>91</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>File Name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelID">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>91</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>id:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelName">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>90</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>name:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelDescription">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>90</y>
-     <width>121</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>description:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelText">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>140</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>text:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelImage">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>140</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>image:</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelImage_2">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>140</y>
-     <width>81</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>height:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxId">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>110</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxDescription">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>110</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxName">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>110</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxText">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxImage">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>160</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxHeight">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>160</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButtonPopAttributes">
-   <property name="geometry">
-    <rect>
-     <x>370</x>
-     <y>40</y>
-     <width>141</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Populate Attributes</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButtonBrowse">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>250</y>
-     <width>89</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Browse</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelTimeBeginning">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>190</y>
-     <width>161</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>datetime beginning:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxTimeBeginning">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>210</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelTimeEnd">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>190</y>
-     <width>131</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>datetime end:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxTimeEnd">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>210</y>
-     <width>150</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="labelTimeEnd_2">
-   <property name="geometry">
-    <rect>
-     <x>363</x>
-     <y>190</y>
-     <width>130</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>time zone:</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboBoxTimeZone">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>210</y>
-     <width>151</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="editable">
-    <bool>true</bool>
-   </property>
+   <widget class="QWidget" name="tabLayer">
+    <attribute name="title">
+     <string>Setup CZML</string>
+    </attribute>
+    <widget class="QComboBox" name="comboBoxText">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelDescription">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>70</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>description:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelText">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>label text:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelSelectLayer">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>21</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Select Layer:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelName">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>70</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>name:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxId">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxImage">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>140</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTimeBeginning">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>161</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>datetime beginning:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxHeight">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>140</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTimeEnd">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>170</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>datetime end:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxTimeZone">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>190</y>
+       <width>151</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelImage">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>120</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>image:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelImage_2">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>120</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>height:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditFileName">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>230</y>
+       <width>301</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonPopAttributes">
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>20</y>
+       <width>141</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Populate Attributes</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelID">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>id:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxDescription">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>90</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDialogButtonBox" name="button_box">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>270</y>
+       <width>341</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboPointLayerNames">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>20</y>
+       <width>230</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxTimeEnd">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelTimeEnd_2">
+     <property name="geometry">
+      <rect>
+       <x>363</x>
+       <y>170</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>time zone:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonBrowse">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>230</y>
+       <width>89</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Browse</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxName">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>90</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelFileName">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>235</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>File Name:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxTimeBeginning">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>150</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabClock">
+    <attribute name="title">
+     <string>Configure Clock</string>
+    </attribute>
+    <widget class="QRadioButton" name="radioButtonClockConf">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>10</y>
+       <width>271</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Configure Cesium Clock inside CZML</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="dateTimeEditClockCurrent">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>60</y>
+       <width>194</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>15</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2020</year>
+       <month>12</month>
+       <day>31</day>
+      </datetime>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd HH:mm</string>
+     </property>
+     <property name="timeSpec">
+      <enum>Qt::UTC</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelClockCurrentDatetime">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>63</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Current Datetime:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelInputClockFormatDatetime">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>97</x>
+       <y>90</y>
+       <width>281</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Ubuntu</family>
+       <pointsize>10</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>*Input Format-------&gt;Year-Month-Day Hour:Minute</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="dateTimeEditClockBeginning">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>130</y>
+       <width>160</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>15</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2020</year>
+       <month>12</month>
+       <day>31</day>
+      </datetime>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd HH:mm</string>
+     </property>
+     <property name="timeSpec">
+      <enum>Qt::UTC</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelClockBeginningDatetime">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>133</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Beginning:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelClockEndDatetime">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>133</y>
+       <width>31</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>End:</string>
+     </property>
+    </widget>
+    <widget class="QDateTimeEdit" name="dateTimeEditClockEnd">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>344</x>
+       <y>130</y>
+       <width>160</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <property name="dateTime">
+      <datetime>
+       <hour>15</hour>
+       <minute>0</minute>
+       <second>0</second>
+       <year>2020</year>
+       <month>12</month>
+       <day>31</day>
+      </datetime>
+     </property>
+     <property name="maximumDate">
+      <date>
+       <year>9999</year>
+       <month>12</month>
+       <day>31</day>
+      </date>
+     </property>
+     <property name="displayFormat">
+      <string>yyyy-MM-dd HH:mm</string>
+     </property>
+     <property name="timeSpec">
+      <enum>Qt::UTC</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelClockMultiplier">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>185</y>
+       <width>71</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Multiplier:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditClockMultiplier">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>181</y>
+       <width>80</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>25000</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelClockRange">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>103</x>
+       <y>223</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clock Range:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxClockRange">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>221</y>
+       <width>160</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>LOOP_STOP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>UNBOUNDED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CLAMPED</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="labelClockRange_2">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>103</x>
+       <y>264</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clock Step:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxClockStep">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>261</y>
+       <width>240</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>SYSTEM_CLOCK_MULTIPLIER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TICK_DEPENDENT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SYSTEM_CLOCK</string>
+      </property>
+     </item>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabInfo">
+    <attribute name="title">
+     <string>Information</string>
+    </attribute>
+    <widget class="QCommandLinkButton" name="commandLinkButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>10</y>
+       <width>291</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="text">
+      <string>Visit CZML Guide to learn about parameters.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>611</width>
+       <height>451</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>:/plugins/CZMLBillboardMaker/attributes_info.png</pixmap>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>360</y>
+       <width>233</width>
+       <height>58</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>:/plugins/CZMLBillboardMaker/stamp.png</pixmap>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>commandLinkButton</zorder>
+    <zorder>label_2</zorder>
+   </widget>
   </widget>
  </widget>
  <resources/>

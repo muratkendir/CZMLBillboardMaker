@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/plugins/CZMLBillboardMaker" >
         <file>icon.png</file>
+        <file>attributes_info.png</file>
+        <file>stamp.png</file>
     </qresource>
 </RCC>

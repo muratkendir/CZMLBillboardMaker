@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="img_">
+    <file>stamp.png</file>
+    <file>attributes_info.png</file>
+  </qresource>
+</RCC>
