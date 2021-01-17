@@ -19,7 +19,7 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
     shouldAnimate: true
 });
 ```
-
+![Explenation of Attributes](/attributes_info.png)
 
 <!-- Also feel free to update second URL to any URL -->
 [![Murat Kendir's github stats](https://github-readme-stats.vercel.app/api?username=muratkendir&count_private=true&include_all_commits=true&theme=radical)](https://github.com/muratkendir)
