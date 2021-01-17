@@ -19,7 +19,7 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
     shouldAnimate: true
 });
 ```
-![Explenation of Attributes](/attributes_info.png)
+![Explanation of Attributes](/attributes_info.png)
 
 <!-- Also feel free to update second URL to any URL -->
 [![Murat Kendir's github stats](https://github-readme-stats.vercel.app/api?username=muratkendir&count_private=true&include_all_commits=true&theme=radical)](https://github.com/muratkendir)
@@ -27,6 +27,7 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
 <!--[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][website]-->
 <!--[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]-->
 [<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
 <br />
 <!-- Optional if you have blogs -->
 <!--## Latest blog posts:-->
@@ -36,3 +37,4 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
 <!--[website]: https://google.com-->
 <!--[twitter]: https://twitter.com/indrajeet_nikam-->
 [linkedin]: https://www.linkedin.com/in/murat-kendir-66a39731/
+[youtube]: https://www.youtube.com/c/MURATKENDIR/videos
