@@ -206,26 +206,49 @@ class CZMLBillboardMaker:
                     selectedLayer = currentLayers.get(layer)
                     #print(selectedLayer.attributeAliases())
                     self.dlg.comboBoxId.clear()
+                    self.dlg.comboBoxId.addItem('Not Selected')
                     self.dlg.comboBoxId.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxName.clear()
+                    self.dlg.comboBoxName.addItem('Not Selected')
                     self.dlg.comboBoxName.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxDescription.clear()
+                    self.dlg.comboBoxDescription.addItem('Not Selected')
                     self.dlg.comboBoxDescription.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxText.clear()
+                    self.dlg.comboBoxText.addItem('Not Selected')
                     self.dlg.comboBoxText.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxImage.clear()
+                    self.dlg.comboBoxImage.addItem('Not Selected')
                     self.dlg.comboBoxImage.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxHeight.clear()
+                    self.dlg.comboBoxHeight.addItem('Not Selected')
                     self.dlg.comboBoxHeight.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxTimeBeginning.clear()
+                    self.dlg.comboBoxTimeBeginning.addItem('Not Selected')
                     self.dlg.comboBoxTimeBeginning.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxTimeEnd.clear()
+                    self.dlg.comboBoxTimeEnd.addItem('Not Selected')
                     self.dlg.comboBoxTimeEnd.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxTimeZone.clear()
                     self.dlg.comboBoxTimeZone.addItems(pytz.all_timezones)
+                    #print(pytz.all_timezones)
+                    self.dlg.comboBoxTimeZone.setCurrentText('UTC')
                     
         else:
             print('Please select a valid layer.')
+
+    #Clear All function
+    def clearAll(self):
+        self.dlg.comboBoxTimeZone.clear()
+        self.dlg.comboBoxTimeEnd.clear()
+        self.dlg.comboBoxTimeBeginning.clear()
+        self.dlg.comboBoxHeight.clear()
+        self.dlg.comboBoxImage.clear()
+        self.dlg.comboBoxText.clear()
+        self.dlg.comboBoxDescription.clear()
+        self.dlg.comboBoxName.clear()
+        self.dlg.comboBoxId.clear()
+        self.dlg.lineEditFileName.clear()
 
     #Selecting filename for export czml file
     def browseForFileName(self):
@@ -252,6 +275,16 @@ class CZMLBillboardMaker:
             self.dlg.comboBoxClockRange.setDisabled(1)
             self.dlg.comboBoxClockStep.setDisabled(1)
 
+    def checkSetupTimeButton(self):
+        if self.dlg.radioButtonSetupTime.isChecked():
+            self.dlg.comboBoxTimeBeginning.setEnabled(1)
+            self.dlg.comboBoxTimeEnd.setEnabled(1)
+            self.dlg.comboBoxTimeZone.setEnabled(1)
+        else:
+            self.dlg.comboBoxTimeBeginning.setDisabled(1)
+            self.dlg.comboBoxTimeEnd.setDisabled(1)
+            self.dlg.comboBoxTimeZone.setDisabled(1)
+
     def run(self):
         """Run method that performs all the real work"""
         
@@ -260,20 +293,28 @@ class CZMLBillboardMaker:
         if self.first_start == True:
             self.first_start = False
             self.dlg = CZMLBillboardMakerDialog()
+            self.dlg.lineEditFileName.clear()
+        
+            #Clear first point based layers combobox, then populate with point layers.
+            self.dlg.comboPointLayerNames.clear()
+            #Set a placeholder text for layer combobox
+            self.dlg.comboPointLayerNames.addItem('Select a point layer')
+            self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
+            #self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
 
         #If Configure Cesium Clock radio button element selected, then activate clock parameters and get them.
         self.dlg.radioButtonClockConf.clicked.connect(self.checkClockButton)
 
-        #Clear first point based layers combobox, then populate with point layers.
-        self.dlg.comboPointLayerNames.clear()
-        #Set a placeholder text for layer combobox
-        self.dlg.comboPointLayerNames.addItem('Select a point layer')
-        self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
-        self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
+        #If checked time attributes will be activated
+        self.dlg.radioButtonSetupTime.clicked.connect(self.checkSetupTimeButton)
 
+        #Populate Attributes Button
         self.dlg.pushButtonPopAttributes.clicked.connect(self.populateAttributes)
+
+        #Clear All Button
+        self.dlg.pushButtonClearAll.clicked.connect(self.clearAll)
         
-        self.dlg.lineEditFileName.clear()
+        
         self.dlg.pushButtonBrowse.clicked.connect(self.browseForFileName)
 
         #Visit CZML Guide page if command link clicked.
@@ -306,10 +347,11 @@ class CZMLBillboardMaker:
             selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
             selectedTextField = self.dlg.comboBoxText.currentText()
             selectedImageField = self.dlg.comboBoxImage.currentText()
-            selectedTimeBeginningField = self.dlg.comboBoxTimeBeginning.currentText()
-            selectedTimeEndField = self.dlg.comboBoxTimeEnd.currentText()
-            selectedTimeZone = self.dlg.comboBoxTimeZone.currentText()
-            timeZone = timezone(self.dlg.comboBoxTimeZone.currentText())
+            if self.dlg.radioButtonSetupTime.isChecked():
+                selectedTimeBeginningField = self.dlg.comboBoxTimeBeginning.currentText()
+                selectedTimeEndField = self.dlg.comboBoxTimeEnd.currentText()
+                selectedTimeZone = self.dlg.comboBoxTimeZone.currentText()
+                timeZone = timezone(self.dlg.comboBoxTimeZone.currentText())
             #No need to format, used isoformat
             #dateTimeFormat = fmt = '%Y-%m-%dT%H:%M:%S%z'
 
@@ -333,10 +375,10 @@ class CZMLBillboardMaker:
             exportedFile = open(fileURL, 'w', encoding='utf-8')
 
             #Writes beginning of CZML document and layer name as document name.
-            beginningLines = '[\n    {\n        "version": "1.0", \n        "id": "document", \n        "name": "'+ layerName +'",\n'
+            beginningLines = '[\n    {\n        "version": "1.0" \n        ,"id": "document" \n        ,"name": "'+ layerName +'"'
             #Add CZML Clock parameters if enabled.
             if self.dlg.radioButtonClockConf.isChecked():
-                beginningLines = beginningLines + '        "clock": {\n            "interval": "'
+                beginningLines = beginningLines + '\n        ,"clock": {\n            "interval": "'
                 beginningLines = beginningLines + selectedClockBeginningLocal + '/' + selectedClockEndLocal + '",\n'
                 beginningLines = beginningLines + '            "currentTime": "' + selectedClockCurrentLocal + '",\n'
                 beginningLines = beginningLines + '            "multiplier": ' + selectedClockMultiplier + ',\n'
@@ -346,19 +388,20 @@ class CZMLBillboardMaker:
                 beginningLines = beginningLines + '    }'
             else:           
                 #Last row of beginning header lines
-                beginningLines = beginningLines + '    }'
+                beginningLines = beginningLines + '\n    }'
 
             featureLines = ''
 
             for feature in selectedLayer.getFeatures():
                 #if time interval selected, datetime attribute selected and localized by selected time zone.
                 #beginning and end localized datetime will be added to label and billboard objects.
-                beginningDateTime =  feature.attribute(selectedTimeBeginningField)
-                endDateTime =  feature.attribute(selectedTimeEndField)
-                pyBeginningDateTime = beginningDateTime.toPyDateTime()
-                pyEndDateTime = endDateTime.toPyDateTime()
-                beginningLocalDateTime = (timeZone.localize(pyBeginningDateTime)).isoformat()
-                endLocalDateTime = (timeZone.localize(pyEndDateTime)).isoformat()
+                if self.dlg.radioButtonSetupTime.isChecked():
+                    beginningDateTime =  feature.attribute(selectedTimeBeginningField)
+                    endDateTime =  feature.attribute(selectedTimeEndField)
+                    pyBeginningDateTime = beginningDateTime.toPyDateTime()
+                    pyEndDateTime = endDateTime.toPyDateTime()
+                    beginningLocalDateTime = (timeZone.localize(pyBeginningDateTime)).isoformat()
+                    endLocalDateTime = (timeZone.localize(pyEndDateTime)).isoformat()
 
                 positionLines = ',\n    {\n        "position": {\n            "cartographicDegrees": [\n                "'
                 positionLines = positionLines + str(round(feature.geometry().asPoint().x(),7))
@@ -369,12 +412,14 @@ class CZMLBillboardMaker:
                 labelLines = '\n            ]\n        }, \n        "label": {\n            "text": "'
                 labelLines = labelLines + str(feature.attribute(selectedTextField))
                 labelLines = labelLines + '",\n'
-                labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
+                if self.dlg.radioButtonSetupTime.isChecked():
+                    labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
                 labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },\n            "disableDepthTestDistance": 9999999999,\n            "outlineWidth": 3,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
                 billboardLines = '        "billboard": {\n            "image": [\n                {\n                "uri": "'
                 billboardLines = billboardLines + str(feature.attribute(selectedImageField))
-                billboardLines = billboardLines + '",\n'
-                billboardLines = billboardLines + '                "interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
+                billboardLines = billboardLines + '"\n'
+                if self.dlg.radioButtonSetupTime.isChecked():
+                    billboardLines = billboardLines + '                ,"interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
                 billboardLines = billboardLines + '                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        },\n'
                 idLines = '        "id": "'
                 idLines = idLines + str(feature.attribute(selectedIdField))

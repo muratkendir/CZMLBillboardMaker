@@ -22,8 +22,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>601</width>
-     <height>481</height>
+     <width>600</width>
+     <height>480</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -39,9 +39,9 @@
     <widget class="QComboBox" name="comboBoxText">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>140</y>
-       <width>150</width>
+       <x>399</x>
+       <y>93</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -49,8 +49,8 @@
     <widget class="QLabel" name="labelDescription">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>70</y>
+       <x>210</x>
+       <y>155</y>
        <width>121</width>
        <height>20</height>
       </rect>
@@ -62,8 +62,8 @@
     <widget class="QLabel" name="labelText">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>120</y>
+       <x>399</x>
+       <y>72</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -76,7 +76,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>21</y>
+       <y>23</y>
        <width>91</width>
        <height>20</height>
       </rect>
@@ -88,8 +88,8 @@
     <widget class="QLabel" name="labelName">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>70</y>
+       <x>210</x>
+       <y>72</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -102,8 +102,8 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>90</y>
-       <width>150</width>
+       <y>93</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -111,9 +111,9 @@
     <widget class="QComboBox" name="comboBoxImage">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>140</y>
-       <width>150</width>
+       <x>20</x>
+       <y>177</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -122,7 +122,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>170</y>
+       <y>265</y>
        <width>161</width>
        <height>20</height>
       </rect>
@@ -134,9 +134,9 @@
     <widget class="QComboBox" name="comboBoxHeight">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>140</y>
-       <width>150</width>
+       <x>400</x>
+       <y>177</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -144,8 +144,8 @@
     <widget class="QLabel" name="labelTimeEnd">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>170</y>
+       <x>220</x>
+       <y>265</y>
        <width>131</width>
        <height>20</height>
       </rect>
@@ -155,11 +155,14 @@
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxTimeZone">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>190</y>
-       <width>151</width>
+       <x>420</x>
+       <y>290</y>
+       <width>150</width>
        <height>25</height>
       </rect>
      </property>
@@ -170,8 +173,8 @@
     <widget class="QLabel" name="labelImage">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>120</y>
+       <x>20</x>
+       <y>155</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -183,8 +186,8 @@
     <widget class="QLabel" name="labelImage_2">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>120</y>
+       <x>400</x>
+       <y>155</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -196,9 +199,9 @@
     <widget class="QLineEdit" name="lineEditFileName">
      <property name="geometry">
       <rect>
-       <x>110</x>
-       <y>230</y>
-       <width>301</width>
+       <x>106</x>
+       <y>340</y>
+       <width>360</width>
        <height>25</height>
       </rect>
      </property>
@@ -206,7 +209,7 @@
     <widget class="QPushButton" name="pushButtonPopAttributes">
      <property name="geometry">
       <rect>
-       <x>370</x>
+       <x>315</x>
        <y>20</y>
        <width>141</width>
        <height>25</height>
@@ -220,7 +223,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>70</y>
+       <y>72</y>
        <width>91</width>
        <height>20</height>
       </rect>
@@ -232,9 +235,9 @@
     <widget class="QComboBox" name="comboBoxDescription">
      <property name="geometry">
       <rect>
-       <x>360</x>
-       <y>90</y>
-       <width>150</width>
+       <x>210</x>
+       <y>177</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -242,8 +245,8 @@
     <widget class="QDialogButtonBox" name="button_box">
      <property name="geometry">
       <rect>
-       <x>170</x>
-       <y>270</y>
+       <x>230</x>
+       <y>390</y>
        <width>341</width>
        <height>32</height>
       </rect>
@@ -260,17 +263,20 @@
       <rect>
        <x>120</x>
        <y>20</y>
-       <width>230</width>
+       <width>180</width>
        <height>25</height>
       </rect>
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxTimeEnd">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>190</y>
-       <width>150</width>
+       <x>220</x>
+       <y>290</y>
+       <width>180</width>
        <height>25</height>
       </rect>
      </property>
@@ -278,8 +284,8 @@
     <widget class="QLabel" name="labelTimeEnd_2">
      <property name="geometry">
       <rect>
-       <x>363</x>
-       <y>170</y>
+       <x>420</x>
+       <y>265</y>
        <width>130</width>
        <height>20</height>
       </rect>
@@ -291,9 +297,9 @@
     <widget class="QPushButton" name="pushButtonBrowse">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>230</y>
-       <width>89</width>
+       <x>480</x>
+       <y>340</y>
+       <width>90</width>
        <height>25</height>
       </rect>
      </property>
@@ -304,9 +310,9 @@
     <widget class="QComboBox" name="comboBoxName">
      <property name="geometry">
       <rect>
-       <x>190</x>
-       <y>90</y>
-       <width>150</width>
+       <x>210</x>
+       <y>93</y>
+       <width>170</width>
        <height>25</height>
       </rect>
      </property>
@@ -315,8 +321,8 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>235</y>
-       <width>91</width>
+       <y>342</y>
+       <width>90</width>
        <height>20</height>
       </rect>
      </property>
@@ -325,13 +331,134 @@
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxTimeBeginning">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>190</y>
-       <width>150</width>
+       <y>290</y>
+       <width>180</width>
        <height>25</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButtonSetupTime">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>230</y>
+       <width>311</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add time start and end times to features.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelOptionalAttributes">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>133</y>
+       <width>551</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <italic>false</italic>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(85, 87, 83);</string>
+     </property>
+     <property name="text">
+      <string>Optional Parameters</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>135</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>378</x>
+       <y>135</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>205</y>
+       <width>571</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>571</x>
+       <y>144</y>
+       <width>20</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_5">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>144</y>
+       <width>20</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonClearAll">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>20</y>
+       <width>100</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear All</string>
      </property>
     </widget>
    </widget>
@@ -366,7 +493,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>15</hour>
+       <hour>12</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -434,7 +561,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>15</hour>
+       <hour>12</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -495,7 +622,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>15</hour>
+       <hour>12</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
