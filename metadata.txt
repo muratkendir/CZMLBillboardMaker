@@ -6,11 +6,11 @@
 name=CZML Billboard Maker
 qgisMinimumVersion=3.0
 description=Creates Billboards from a point vector layer.
-version=0.1
+version=0.2
 author=Murat Kendir
 email=muratkendir@gmail.com
 
-about=You can convert your point vector layers into a CZML file to visualize them as billboards in Cesium environment by using this QGIS plugin. CZML brief definition from official guide: "CZML is a JSON format for describing a time-dynamic graphical scene, primarily for display in a web browser running Cesium. It describes lines, points, billboards, models, and other graphical primitives, and specifies how they change with time. "* * https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
+about=You can convert your point vector layers into a CZML file to visualize them as billboards in Cesium environment by using this QGIS plugin. \n CZML brief definition from official guide: "CZML is a JSON format for describing a time-dynamic graphical scene, primarily for display in a web browser running Cesium. It describes lines, points, billboards, models, and other graphical primitives, and specifies how they change with time. " \n * * https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide
 
 tracker=https://github.com/muratkendir/CZMLBillboardMaker/issues
 repository=https://github.com/muratkendir/CZMLBillboardMaker

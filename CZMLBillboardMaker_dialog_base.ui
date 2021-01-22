@@ -40,7 +40,7 @@
      <property name="geometry">
       <rect>
        <x>399</x>
-       <y>93</y>
+       <y>80</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -49,8 +49,8 @@
     <widget class="QLabel" name="labelDescription">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>155</y>
+       <x>109</x>
+       <y>180</y>
        <width>121</width>
        <height>20</height>
       </rect>
@@ -63,7 +63,7 @@
      <property name="geometry">
       <rect>
        <x>399</x>
-       <y>72</y>
+       <y>59</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -88,8 +88,8 @@
     <widget class="QLabel" name="labelName">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>72</y>
+       <x>20</x>
+       <y>107</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -102,7 +102,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>93</y>
+       <y>80</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -111,8 +111,8 @@
     <widget class="QComboBox" name="comboBoxImage">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>177</y>
+       <x>399</x>
+       <y>129</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -122,7 +122,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>265</y>
+       <y>272</y>
        <width>161</width>
        <height>20</height>
       </rect>
@@ -134,8 +134,8 @@
     <widget class="QComboBox" name="comboBoxHeight">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>177</y>
+       <x>320</x>
+       <y>202</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -145,7 +145,7 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>265</y>
+       <y>272</y>
        <width>131</width>
        <height>20</height>
       </rect>
@@ -161,7 +161,7 @@
      <property name="geometry">
       <rect>
        <x>420</x>
-       <y>290</y>
+       <y>297</y>
        <width>150</width>
        <height>25</height>
       </rect>
@@ -173,8 +173,8 @@
     <widget class="QLabel" name="labelImage">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>155</y>
+       <x>399</x>
+       <y>107</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -186,8 +186,8 @@
     <widget class="QLabel" name="labelImage_2">
      <property name="geometry">
       <rect>
-       <x>400</x>
-       <y>155</y>
+       <x>320</x>
+       <y>180</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -204,6 +204,12 @@
        <width>360</width>
        <height>25</height>
       </rect>
+     </property>
+     <property name="placeholderText">
+      <string/>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButtonPopAttributes">
@@ -223,7 +229,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>72</y>
+       <y>59</y>
        <width>91</width>
        <height>20</height>
       </rect>
@@ -235,8 +241,8 @@
     <widget class="QComboBox" name="comboBoxDescription">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>177</y>
+       <x>109</x>
+       <y>202</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -275,7 +281,7 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>290</y>
+       <y>297</y>
        <width>180</width>
        <height>25</height>
       </rect>
@@ -285,7 +291,7 @@
      <property name="geometry">
       <rect>
        <x>420</x>
-       <y>265</y>
+       <y>272</y>
        <width>130</width>
        <height>20</height>
       </rect>
@@ -310,8 +316,8 @@
     <widget class="QComboBox" name="comboBoxName">
      <property name="geometry">
       <rect>
-       <x>210</x>
-       <y>93</y>
+       <x>20</x>
+       <y>129</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -337,7 +343,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>290</y>
+       <y>297</y>
        <width>180</width>
        <height>25</height>
       </rect>
@@ -347,20 +353,20 @@
      <property name="geometry">
       <rect>
        <x>148</x>
-       <y>230</y>
+       <y>245</y>
        <width>311</width>
        <height>23</height>
       </rect>
      </property>
      <property name="text">
-      <string>Add time start and end times to features.</string>
+      <string>Add start and end times to features.</string>
      </property>
     </widget>
     <widget class="QLabel" name="labelOptionalAttributes">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>133</y>
+       <y>158</y>
        <width>551</width>
        <height>20</height>
       </rect>
@@ -387,7 +393,7 @@
      <property name="geometry">
       <rect>
        <x>11</x>
-       <y>135</y>
+       <y>160</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -400,7 +406,7 @@
      <property name="geometry">
       <rect>
        <x>378</x>
-       <y>135</y>
+       <y>160</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -413,7 +419,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>205</y>
+       <y>230</y>
        <width>571</width>
        <height>20</height>
       </rect>
@@ -426,7 +432,7 @@
      <property name="geometry">
       <rect>
        <x>571</x>
-       <y>144</y>
+       <y>169</y>
        <width>20</width>
        <height>71</height>
       </rect>
@@ -439,7 +445,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>144</y>
+       <y>169</y>
        <width>20</width>
        <height>71</height>
       </rect>
@@ -459,6 +465,50 @@
      </property>
      <property name="text">
       <string>Clear All</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxBillboardType">
+     <property name="geometry">
+      <rect>
+       <x>228</x>
+       <y>110</y>
+       <width>141</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <item>
+      <property name="text">
+       <string>Labels + Images</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Only Labels</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Only Images</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>238</x>
+       <y>85</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Billboard Type:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -493,7 +543,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>12</hour>
+       <hour>6</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -561,7 +611,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>12</hour>
+       <hour>6</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -622,7 +672,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>12</hour>
+       <hour>6</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>

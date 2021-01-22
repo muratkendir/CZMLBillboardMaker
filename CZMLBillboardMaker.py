@@ -206,7 +206,6 @@ class CZMLBillboardMaker:
                     selectedLayer = currentLayers.get(layer)
                     #print(selectedLayer.attributeAliases())
                     self.dlg.comboBoxId.clear()
-                    self.dlg.comboBoxId.addItem('Not Selected')
                     self.dlg.comboBoxId.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxName.clear()
                     self.dlg.comboBoxName.addItem('Not Selected')
@@ -253,11 +252,26 @@ class CZMLBillboardMaker:
     #Selecting filename for export czml file
     def browseForFileName(self):
         fileName = QFileDialog.getSaveFileName(self.dlg, "Select output file ","", '*.czml')
-        fileURL = fileName[0] + '.czml'
+        print(fileName)
+        fileURL = fileName[0]
         self.dlg.lineEditFileName.setText(fileURL)
     
     def browseWebLink(self):
         webbrowser.open('https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide')
+
+    def checkBillboardType(self):
+        if self.dlg.comboBoxBillboardType.currentText() == 'Only Labels':
+            print("Only Labels selected.")
+            self.dlg.comboBoxText.setEnabled(1)
+            self.dlg.comboBoxImage.setDisabled(1)
+        elif self.dlg.comboBoxBillboardType.currentText() == 'Only Images':
+            print("Only Images selected.")
+            self.dlg.comboBoxText.setDisabled(1)
+            self.dlg.comboBoxImage.setEnabled(1)            
+        else:
+            print("Labels and Images selected.")
+            self.dlg.comboBoxText.setEnabled(1)
+            self.dlg.comboBoxImage.setEnabled(1)            
 
     def checkClockButton(self):
         if self.dlg.radioButtonClockConf.isChecked():
@@ -302,6 +316,9 @@ class CZMLBillboardMaker:
             self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
             #self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
 
+        #Only Label / Only Image / Label + Image
+        self.dlg.comboBoxBillboardType.currentIndexChanged.connect(self.checkBillboardType) 
+
         #If Configure Cesium Clock radio button element selected, then activate clock parameters and get them.
         self.dlg.radioButtonClockConf.clicked.connect(self.checkClockButton)
 
@@ -337,7 +354,7 @@ class CZMLBillboardMaker:
                     if currentLayers.get(layer).name() == self.dlg.comboPointLayerNames.currentText():
                         selectedLayer = currentLayers.get(layer)
             layerName = selectedLayer.name()
-            layerCrs = selectedLayer.sourceCrs()
+            #layerCrs = selectedLayer.sourceCrs()
             #print(layerCrs)
 
             #Take selected fields from attributes combobox.
@@ -385,10 +402,10 @@ class CZMLBillboardMaker:
                 beginningLines = beginningLines + '            "range": "' + selectedClockRange + '",\n'
                 beginningLines = beginningLines + '            "step": "' + selectedClockStep + '"\n'
                 beginningLines = beginningLines + '        }\n'
-                beginningLines = beginningLines + '    }'
+                beginningLines = beginningLines + '    }\n'
             else:           
                 #Last row of beginning header lines
-                beginningLines = beginningLines + '\n    }'
+                beginningLines = beginningLines + '\n    }\n'
 
             featureLines = ''
 
@@ -402,35 +419,52 @@ class CZMLBillboardMaker:
                     pyEndDateTime = endDateTime.toPyDateTime()
                     beginningLocalDateTime = (timeZone.localize(pyBeginningDateTime)).isoformat()
                     endLocalDateTime = (timeZone.localize(pyEndDateTime)).isoformat()
-
-                positionLines = ',\n    {\n        "position": {\n            "cartographicDegrees": [\n                "'
+                if self.dlg.comboBoxHeight.currentText() != 'Not Selected':
+                    selectedHeight = str(feature.attribute(selectedHeightField))
+                else:
+                    selectedHeight = '10000'
+                positionLines = '\n    ,{\n        "position": {\n            "cartographicDegrees": [\n                "'
                 positionLines = positionLines + str(round(feature.geometry().asPoint().x(),7))
-                positionLines = positionLines + '", \n                "'
+                positionLines = positionLines + '" \n                ,"'
                 positionLines = positionLines + str(round(feature.geometry().asPoint().y(),7))
-                positionLines = positionLines + '", \n                '
-                positionLines = positionLines + str(feature.attribute(selectedHeightField))
-                labelLines = '\n            ]\n        }, \n        "label": {\n            "text": "'
-                labelLines = labelLines + str(feature.attribute(selectedTextField))
-                labelLines = labelLines + '",\n'
-                if self.dlg.radioButtonSetupTime.isChecked():
-                    labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
-                labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },\n            "disableDepthTestDistance": 9999999999,\n            "outlineWidth": 3,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        },\n'
-                billboardLines = '        "billboard": {\n            "image": [\n                {\n                "uri": "'
-                billboardLines = billboardLines + str(feature.attribute(selectedImageField))
-                billboardLines = billboardLines + '"\n'
-                if self.dlg.radioButtonSetupTime.isChecked():
-                    billboardLines = billboardLines + '                ,"interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
-                billboardLines = billboardLines + '                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        },\n'
-                idLines = '        "id": "'
+                positionLines = positionLines + '" \n                ,'
+                positionLines = positionLines + selectedHeight
+                positionLines = positionLines + '\n            ]\n        }\n'
+                if self.dlg.comboBoxText.isEnabled():
+                    labelLines = '        ,"label": {\n            "text": "'
+                    labelLines = labelLines + str(feature.attribute(selectedTextField))
+                    labelLines = labelLines + '",\n'
+                    if self.dlg.radioButtonSetupTime.isChecked():
+                        labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
+                    labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },\n            "disableDepthTestDistance": 9999999999,\n            "outlineWidth": 3,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        }\n'
+                else:
+                    #labelLines = '        ,"commentAboutLabels" : "Skipped"\n'  
+                    labelLines = ' '
+                if self.dlg.comboBoxImage.isEnabled():
+                    billboardLines = '        ,"billboard": {\n            "image": [\n                {\n                "uri": "'
+                    billboardLines = billboardLines + str(feature.attribute(selectedImageField))
+                    billboardLines = billboardLines + '"\n'
+                    if self.dlg.radioButtonSetupTime.isChecked():
+                        billboardLines = billboardLines + '                ,"interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
+                    billboardLines = billboardLines + '                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        }\n'
+                else:
+                    #billboardLines = '        ,"commentAboutImages" : "Skipped"\n'
+                    billboardLines = ' '
+                idLines = '        ,"id": "'
                 idLines = idLines + str(feature.attribute(selectedIdField))
-                idLines = idLines + '",\n'
-                nameLines = '        "name": "'
-                nameLines = nameLines + str(feature.attribute(selectedNameField))
-                nameLines = nameLines + '",\n'
-                descriptionLines = '        "description": "'
-                descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
-                descriptionLines = descriptionLines + '"\n    }'
-
+                idLines = idLines + '"\n'
+                if self.dlg.comboBoxName.currentText() != 'Not Selected':
+                    nameLines = '        ,"name": "'
+                    nameLines = nameLines + str(feature.attribute(selectedNameField))
+                    nameLines = nameLines + '"\n'
+                else:
+                    nameLines = ' '
+                if self.dlg.comboBoxDescription.currentText() != 'Not Selected':
+                    descriptionLines = '        ,"description": "'
+                    descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
+                    descriptionLines = descriptionLines + '"\n    }'
+                else:
+                    descriptionLines = '\n    }'
                 #print(feature.attribute(selectedTimeBeginningField).toString('yyyy-MM-ddThh:mm:sszz'))
                 #print(feature.attribute(selectedTimeEndField).toString('yyyy-MM-ddThh:mm:ss'))
                 #print(selectedTimeZone)
