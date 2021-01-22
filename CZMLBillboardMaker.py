@@ -252,7 +252,7 @@ class CZMLBillboardMaker:
     #Selecting filename for export czml file
     def browseForFileName(self):
         fileName = QFileDialog.getSaveFileName(self.dlg, "Select output file ","", '*.czml')
-        print(fileName)
+        #print(fileName)
         fileURL = fileName[0]
         self.dlg.lineEditFileName.setText(fileURL)
     
@@ -261,15 +261,15 @@ class CZMLBillboardMaker:
 
     def checkBillboardType(self):
         if self.dlg.comboBoxBillboardType.currentText() == 'Only Labels':
-            print("Only Labels selected.")
+            #print("Only Labels selected.")
             self.dlg.comboBoxText.setEnabled(1)
             self.dlg.comboBoxImage.setDisabled(1)
         elif self.dlg.comboBoxBillboardType.currentText() == 'Only Images':
-            print("Only Images selected.")
+            #print("Only Images selected.")
             self.dlg.comboBoxText.setDisabled(1)
             self.dlg.comboBoxImage.setEnabled(1)            
         else:
-            print("Labels and Images selected.")
+            #print("Labels and Images selected.")
             self.dlg.comboBoxText.setEnabled(1)
             self.dlg.comboBoxImage.setEnabled(1)            
 
