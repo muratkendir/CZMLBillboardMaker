@@ -251,10 +251,14 @@ class CZMLBillboardMaker:
 
     #Selecting filename for export czml file
     def browseForFileName(self):
-        fileName = QFileDialog.getSaveFileName(self.dlg, "Select output file ","", '*.czml')
-        #print(fileName)
+        fileName = QFileDialog.getSaveFileName(self.dlg,"Select output file ","", '*.czml')
         fileURL = fileName[0]
-        self.dlg.lineEditFileName.setText(fileURL)
+        fileExtension = fileURL[-5:] 
+        if fileExtension == '.czml' or fileExtension == '.CZML':
+            checkedFileURL = fileURL
+        else:
+            checkedFileURL = fileURL + '.czml'
+        self.dlg.lineEditFileName.setText(checkedFileURL)
     
     def browseWebLink(self):
         webbrowser.open('https://github.com/AnalyticalGraphicsInc/czml-writer/wiki/CZML-Guide')
@@ -308,7 +312,8 @@ class CZMLBillboardMaker:
             self.first_start = False
             self.dlg = CZMLBillboardMakerDialog()
             self.dlg.lineEditFileName.clear()
-        
+            self.dlg.pushButtonBrowse.clicked.connect(self.browseForFileName)
+
             #Clear first point based layers combobox, then populate with point layers.
             self.dlg.comboPointLayerNames.clear()
             #Set a placeholder text for layer combobox
@@ -316,6 +321,7 @@ class CZMLBillboardMaker:
             self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
             #self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
 
+        
         #Only Label / Only Image / Label + Image
         self.dlg.comboBoxBillboardType.currentIndexChanged.connect(self.checkBillboardType) 
 
@@ -332,7 +338,7 @@ class CZMLBillboardMaker:
         self.dlg.pushButtonClearAll.clicked.connect(self.clearAll)
         
         
-        self.dlg.pushButtonBrowse.clicked.connect(self.browseForFileName)
+        
 
         #Visit CZML Guide page if command link clicked.
         self.dlg.commandLinkButton.clicked.connect(self.browseWebLink)
@@ -389,7 +395,7 @@ class CZMLBillboardMaker:
                 selectedClockStep = self.dlg.comboBoxClockStep.currentText()
 
 
-            exportedFile = open(fileURL, 'w', encoding='utf-8')
+            exportedFile = open(fileURL, mode='w', encoding='utf-8')
 
             #Writes beginning of CZML document and layer name as document name.
             beginningLines = '[\n    {\n        "version": "1.0" \n        ,"id": "document" \n        ,"name": "'+ layerName +'"'
