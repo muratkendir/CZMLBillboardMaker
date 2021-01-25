@@ -8,7 +8,7 @@
 
 
 ## Tutorial Video:
-[![Website](https://www.youtube.com/watch?v=da_WEb4123g)
+[youtube]: https://www.youtube.com/watch?v=da_WEb4123g
 
 ## CZML Bilboard Maker
 1) Simply select a point vector layer.
