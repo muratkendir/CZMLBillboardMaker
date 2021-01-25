@@ -6,6 +6,10 @@
 - 🌱 I’m currently learning - Django
 - 👯 I’m looking to collaborate with - GIS Developers
 
+
+##Tutorial Video:
+[youtube]: https://www.youtube.com/watch?v=da_WEb4123g
+
 ## CZML Bilboard Maker
 1) Simply select a point vector layer.
 2) Give neccessary attributes as CZML file objects.
@@ -38,6 +42,6 @@ var viewer = new Cesium.Viewer("cesiumContainer", {
 <!--[website]: https://google.com-->
 <!--[twitter]: https://twitter.com/indrajeet_nikam-->
 [linkedin]: https://www.linkedin.com/in/murat-kendir-66a39731/
-[youtube]: https://www.youtube.com/c/MURATKENDIR/videos
+[youtube]: https://www.youtube.com/watch?v=da_WEb4123g
 
 <!--created with help: https://fullyunderstood.com/how-to-create-beautiful-github-profile-readmemd/-->
