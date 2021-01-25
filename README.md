@@ -8,7 +8,8 @@
 
 
 ## Tutorial Video:
-[youtube]: https://www.youtube.com/watch?v=da_WEb4123g
+<a href="https://www.youtube.com/watch?v=da_WEb4123g">CZML Billboard Maker Tutorial</a>
+<img alt="YouTube Video Votes" src="https://img.shields.io/youtube/likes/da_WEb4123g?style=social&withDislikes">
 
 ## CZML Bilboard Maker
 1) Simply select a point vector layer.
