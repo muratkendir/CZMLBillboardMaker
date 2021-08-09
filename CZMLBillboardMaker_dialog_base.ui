@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>599</width>
-    <height>477</height>
+    <height>511</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,14 +23,14 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>480</height>
+     <height>511</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="tabLayer">
     <attribute name="title">
@@ -50,7 +50,7 @@
      <property name="geometry">
       <rect>
        <x>109</x>
-       <y>180</y>
+       <y>230</y>
        <width>121</width>
        <height>20</height>
       </rect>
@@ -122,7 +122,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>272</y>
+       <y>322</y>
        <width>161</width>
        <height>20</height>
       </rect>
@@ -135,7 +135,7 @@
      <property name="geometry">
       <rect>
        <x>320</x>
-       <y>202</y>
+       <y>252</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -145,7 +145,7 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>272</y>
+       <y>322</y>
        <width>131</width>
        <height>20</height>
       </rect>
@@ -161,7 +161,7 @@
      <property name="geometry">
       <rect>
        <x>420</x>
-       <y>297</y>
+       <y>347</y>
        <width>150</width>
        <height>25</height>
       </rect>
@@ -187,7 +187,7 @@
      <property name="geometry">
       <rect>
        <x>320</x>
-       <y>180</y>
+       <y>230</y>
        <width>81</width>
        <height>20</height>
       </rect>
@@ -200,7 +200,7 @@
      <property name="geometry">
       <rect>
        <x>106</x>
-       <y>340</y>
+       <y>390</y>
        <width>360</width>
        <height>25</height>
       </rect>
@@ -242,7 +242,7 @@
      <property name="geometry">
       <rect>
        <x>109</x>
-       <y>202</y>
+       <y>252</y>
        <width>170</width>
        <height>25</height>
       </rect>
@@ -252,7 +252,7 @@
      <property name="geometry">
       <rect>
        <x>230</x>
-       <y>390</y>
+       <y>440</y>
        <width>341</width>
        <height>32</height>
       </rect>
@@ -281,7 +281,7 @@
      <property name="geometry">
       <rect>
        <x>220</x>
-       <y>297</y>
+       <y>347</y>
        <width>180</width>
        <height>25</height>
       </rect>
@@ -291,7 +291,7 @@
      <property name="geometry">
       <rect>
        <x>420</x>
-       <y>272</y>
+       <y>322</y>
        <width>130</width>
        <height>20</height>
       </rect>
@@ -304,7 +304,7 @@
      <property name="geometry">
       <rect>
        <x>480</x>
-       <y>340</y>
+       <y>390</y>
        <width>90</width>
        <height>25</height>
       </rect>
@@ -327,7 +327,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>342</y>
+       <y>392</y>
        <width>90</width>
        <height>20</height>
       </rect>
@@ -343,7 +343,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>297</y>
+       <y>347</y>
        <width>180</width>
        <height>25</height>
       </rect>
@@ -353,7 +353,7 @@
      <property name="geometry">
       <rect>
        <x>148</x>
-       <y>245</y>
+       <y>295</y>
        <width>311</width>
        <height>23</height>
       </rect>
@@ -366,7 +366,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>158</y>
+       <y>208</y>
        <width>551</width>
        <height>20</height>
       </rect>
@@ -393,7 +393,7 @@
      <property name="geometry">
       <rect>
        <x>11</x>
-       <y>160</y>
+       <y>210</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -406,7 +406,7 @@
      <property name="geometry">
       <rect>
        <x>378</x>
-       <y>160</y>
+       <y>210</y>
        <width>201</width>
        <height>20</height>
       </rect>
@@ -419,7 +419,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>230</y>
+       <y>280</y>
        <width>571</width>
        <height>20</height>
       </rect>
@@ -432,7 +432,7 @@
      <property name="geometry">
       <rect>
        <x>571</x>
-       <y>169</y>
+       <y>219</y>
        <width>20</width>
        <height>71</height>
       </rect>
@@ -445,7 +445,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>169</y>
+       <y>219</y>
        <width>20</width>
        <height>71</height>
       </rect>
@@ -494,6 +494,11 @@
        <string>Only Images</string>
       </property>
      </item>
+     <item>
+      <property name="text">
+       <string>Only 3D Models</string>
+      </property>
+     </item>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
@@ -509,6 +514,75 @@
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxModel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>161</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelModel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>158</y>
+       <width>81</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>3D Model:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelAzimuth">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>158</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Azimuth of Model*:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxAzimuth">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>180</y>
+       <width>170</width>
+       <height>25</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNode">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>158</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Node of Model*:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBoxNode">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>180</y>
+       <width>170</width>
+       <height>25</height>
+      </rect>
      </property>
     </widget>
    </widget>
@@ -543,7 +617,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>6</hour>
+       <hour>0</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -611,7 +685,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>6</hour>
+       <hour>0</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -672,7 +746,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>6</hour>
+       <hour>0</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -854,28 +928,92 @@
       <pixmap>:/plugins/CZMLBillboardMaker/attributes_info.png</pixmap>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="labelAzimuthDescription">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>360</y>
-       <width>233</width>
-       <height>58</height>
+       <x>320</x>
+       <y>320</y>
+       <width>271</width>
+       <height>61</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(186, 189, 182);</string>
+     </property>
      <property name="frameShape">
-      <enum>QFrame::Box</enum>
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
      </property>
      <property name="text">
-      <string/>
+      <string>*(Azimuth of Model) - The angle between North and model direction or in other words rotation of model regarding to north-south axe. Should be in decimal degree format.</string>
      </property>
-     <property name="pixmap">
-      <pixmap>:/plugins/CZMLBillboardMaker/stamp.png</pixmap>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labelNodeDescription">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>390</y>
+       <width>321</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Sans Serif</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(46, 52, 54);
+background-color: rgb(211, 215, 207);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="text">
+      <string>*(Node of Model) - Visible name of geometry collections in 3D editor. If you need to rotate your model properly, do not forget to obtain node name using Blender or similar 3D editor. Also consider that models should be in GLTF format, otherwise nodes can not be readable.</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
     <zorder>label</zorder>
     <zorder>commandLinkButton</zorder>
-    <zorder>label_2</zorder>
+    <zorder>labelAzimuthDescription</zorder>
+    <zorder>labelNodeDescription</zorder>
    </widget>
   </widget>
  </widget>

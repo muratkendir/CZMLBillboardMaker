@@ -27,9 +27,11 @@ from qgis.PyQt.QtWidgets import QAction, QFileDialog
 from qgis.core import QgsProject, Qgis
 import datetime
 import webbrowser
+import json
 from pytz import timezone
 import pytz
-
+#Local/ sources
+from .Metadata import Metadata
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
@@ -219,6 +221,15 @@ class CZMLBillboardMaker:
                     self.dlg.comboBoxImage.clear()
                     self.dlg.comboBoxImage.addItem('Not Selected')
                     self.dlg.comboBoxImage.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxModel.clear()
+                    self.dlg.comboBoxModel.addItem('Not Selected')
+                    self.dlg.comboBoxModel.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxAzimuth.clear()
+                    self.dlg.comboBoxAzimuth.addItem('Not Selected')
+                    self.dlg.comboBoxAzimuth.addItems(selectedLayer.attributeAliases())
+                    self.dlg.comboBoxNode.clear()
+                    self.dlg.comboBoxNode.addItem('Not Selected')
+                    self.dlg.comboBoxNode.addItems(selectedLayer.attributeAliases())
                     self.dlg.comboBoxHeight.clear()
                     self.dlg.comboBoxHeight.addItem('Not Selected')
                     self.dlg.comboBoxHeight.addItems(selectedLayer.attributeAliases())
@@ -244,6 +255,9 @@ class CZMLBillboardMaker:
         self.dlg.comboBoxHeight.clear()
         self.dlg.comboBoxImage.clear()
         self.dlg.comboBoxText.clear()
+        self.dlg.comboBoxModel.clear()
+        self.dlg.comboBoxAzimuth.clear()
+        self.dlg.comboBoxNode.clear()
         self.dlg.comboBoxDescription.clear()
         self.dlg.comboBoxName.clear()
         self.dlg.comboBoxId.clear()
@@ -268,14 +282,29 @@ class CZMLBillboardMaker:
             #print("Only Labels selected.")
             self.dlg.comboBoxText.setEnabled(1)
             self.dlg.comboBoxImage.setDisabled(1)
+            self.dlg.comboBoxModel.setDisabled(1)
+            self.dlg.comboBoxAzimuth.setDisabled(1)
+            self.dlg.comboBoxNode.setDisabled(1)
         elif self.dlg.comboBoxBillboardType.currentText() == 'Only Images':
             #print("Only Images selected.")
             self.dlg.comboBoxText.setDisabled(1)
-            self.dlg.comboBoxImage.setEnabled(1)            
+            self.dlg.comboBoxImage.setEnabled(1)
+            self.dlg.comboBoxModel.setDisabled(1)
+            self.dlg.comboBoxAzimuth.setDisabled(1)
+            self.dlg.comboBoxNode.setDisabled(1)
+        elif self.dlg.comboBoxBillboardType.currentText() == 'Only 3D Models':
+            self.dlg.comboBoxText.setDisabled(1)
+            self.dlg.comboBoxImage.setDisabled(1)
+            self.dlg.comboBoxModel.setEnabled(1)
+            self.dlg.comboBoxAzimuth.setEnabled(1)
+            self.dlg.comboBoxNode.setEnabled(1)
         else:
             #print("Labels and Images selected.")
             self.dlg.comboBoxText.setEnabled(1)
-            self.dlg.comboBoxImage.setEnabled(1)            
+            self.dlg.comboBoxImage.setEnabled(1)
+            self.dlg.comboBoxModel.setDisabled(1)
+            self.dlg.comboBoxAzimuth.setDisabled(1)
+            self.dlg.comboBoxNode.setDisabled(1)
 
     def checkClockButton(self):
         if self.dlg.radioButtonClockConf.isChecked():
@@ -370,6 +399,9 @@ class CZMLBillboardMaker:
             selectedDescriptionField = self.dlg.comboBoxDescription.currentText()
             selectedTextField = self.dlg.comboBoxText.currentText()
             selectedImageField = self.dlg.comboBoxImage.currentText()
+            selectedModelField = self.dlg.comboBoxModel.currentText()
+            selectedAzimuthField = self.dlg.comboBoxAzimuth.currentText()
+            selectedNodeField = self.dlg.comboBoxNode.currentText()
             if self.dlg.radioButtonSetupTime.isChecked():
                 selectedTimeBeginningField = self.dlg.comboBoxTimeBeginning.currentText()
                 selectedTimeEndField = self.dlg.comboBoxTimeEnd.currentText()
@@ -397,8 +429,11 @@ class CZMLBillboardMaker:
 
             exportedFile = open(fileURL, mode='w', encoding='utf-8')
 
+            #BeginningLines old method startes here
+            """
             #Writes beginning of CZML document and layer name as document name.
             beginningLines = '[\n    {\n        "version": "1.0" \n        ,"id": "document" \n        ,"name": "'+ layerName +'"'
+
             #Add CZML Clock parameters if enabled.
             if self.dlg.radioButtonClockConf.isChecked():
                 beginningLines = beginningLines + '\n        ,"clock": {\n            "interval": "'
@@ -412,6 +447,23 @@ class CZMLBillboardMaker:
             else:           
                 #Last row of beginning header lines
                 beginningLines = beginningLines + '\n    }\n'
+            """
+            #BeginningLines old method ends here
+
+            #New method of BeginningLines starts here
+            
+            if self.dlg.radioButtonClockConf.isChecked():
+                documentClock = Metadata.Clock(selectedClockCurrentLocal, selectedClockBeginningLocal, selectedClockEndLocal, selectedClockMultiplier, selectedClockRange, selectedClockStep)
+                documentMetadata = Metadata("1.0", "document", layerName, documentClock)
+                print( json.dumps(documentMetadata.getMetaDict()) )
+            else:
+                documentMetadata = Metadata("1.0", "document", layerName)
+                print( documentMetadata.getMetaDict() )
+
+            beginningLines ='[\n' +  json.dumps( documentMetadata.getMetaDict(), indent=4 )
+            
+            #New method of BeginningLines ends here
+            
 
             featureLines = ''
 
@@ -436,7 +488,7 @@ class CZMLBillboardMaker:
                 positionLines = positionLines + '" \n                ,'
                 positionLines = positionLines + selectedHeight
                 positionLines = positionLines + '\n            ]\n        }\n'
-                if self.dlg.comboBoxText.isEnabled():
+                if self.dlg.comboBoxText.isEnabled() and self.dlg.comboBoxText.currentText() != 'Not Selected':
                     labelLines = '        ,"label": {\n            "text": "'
                     labelLines = labelLines + str(feature.attribute(selectedTextField))
                     labelLines = labelLines + '",\n'
@@ -446,7 +498,7 @@ class CZMLBillboardMaker:
                 else:
                     #labelLines = '        ,"commentAboutLabels" : "Skipped"\n'  
                     labelLines = ' '
-                if self.dlg.comboBoxImage.isEnabled():
+                if self.dlg.comboBoxImage.isEnabled() and self.dlg.comboBoxImage.currentText() != 'Not Selected':
                     billboardLines = '        ,"billboard": {\n            "image": [\n                {\n                "uri": "'
                     billboardLines = billboardLines + str(feature.attribute(selectedImageField))
                     billboardLines = billboardLines + '"\n'
@@ -455,7 +507,7 @@ class CZMLBillboardMaker:
                     billboardLines = billboardLines + '                }\n            ],\n            "scale": 1.0,\n            "heightReference": "RELATIVE_TO_GROUND",\n            "pixelOffset": {\n                "cartesian2": [0, -50]\n                }\n        }\n'
                 else:
                     #billboardLines = '        ,"commentAboutImages" : "Skipped"\n'
-                    billboardLines = ' '
+                    billboardLines = ''
                 idLines = '        ,"id": "'
                 idLines = idLines + str(feature.attribute(selectedIdField))
                 idLines = idLines + '"\n'
@@ -464,7 +516,20 @@ class CZMLBillboardMaker:
                     nameLines = nameLines + str(feature.attribute(selectedNameField))
                     nameLines = nameLines + '"\n'
                 else:
-                    nameLines = ' '
+                    nameLines = ''
+
+                if self.dlg.comboBoxModel.isEnabled() and self.dlg.comboBoxModel.currentText() != 'Not Selected':
+                    modelLines = '        ,"model": {\n            "gltf" : "'
+                    modelLines = modelLines + str(feature.attribute(selectedModelField))
+                    modelLines = modelLines + '",\n            "nodeTransformations": {\n                "'
+                    modelLines = modelLines + str(feature.attribute(selectedNodeField))
+                    modelLines = modelLines + '": {\n                    "rotation": {\n                        "unitQuaternion": [\n                            0.0, 0.0, '
+                    modelLines = modelLines + str(feature.attribute(selectedAzimuthField))
+                    modelLines = modelLines + ', 1.0\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
+
+                else:
+                    modelLines=''
+
                 if self.dlg.comboBoxDescription.currentText() != 'Not Selected':
                     descriptionLines = '        ,"description": "'
                     descriptionLines = descriptionLines + str(feature.attribute(selectedDescriptionField))
@@ -474,9 +539,9 @@ class CZMLBillboardMaker:
                 #print(feature.attribute(selectedTimeBeginningField).toString('yyyy-MM-ddThh:mm:sszz'))
                 #print(feature.attribute(selectedTimeEndField).toString('yyyy-MM-ddThh:mm:ss'))
                 #print(selectedTimeZone)
-
                 
-                featureLines = featureLines + positionLines + labelLines + billboardLines + idLines + nameLines + descriptionLines
+
+                featureLines = featureLines + positionLines + labelLines + billboardLines + idLines + nameLines + modelLines + descriptionLines
                 
 
             wholeDocument = beginningLines + featureLines + '\n]'
