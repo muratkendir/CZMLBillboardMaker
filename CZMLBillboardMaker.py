@@ -28,6 +28,7 @@ from qgis.core import QgsProject, Qgis
 import datetime
 import webbrowser
 import json
+import math
 from pytz import timezone
 import pytz
 #Local/ sources
@@ -524,7 +525,7 @@ class CZMLBillboardMaker:
                     modelLines = modelLines + '",\n            "nodeTransformations": {\n                "'
                     modelLines = modelLines + str(feature.attribute(selectedNodeField))
                     modelLines = modelLines + '": {\n                    "rotation": {\n                        "unitQuaternion": [\n                            0.0, 0.0, '
-                    modelLines = modelLines + str(feature.attribute(selectedAzimuthField))
+                    modelLines = modelLines + str(round(math.radians(feature.attribute(selectedAzimuthField)),4))
                     modelLines = modelLines + ', 1.0\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
 
                 else:

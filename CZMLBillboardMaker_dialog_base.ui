@@ -30,7 +30,7 @@
     <string notr="true"/>
    </property>
    <property name="currentIndex">
-    <number>2</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="tabLayer">
     <attribute name="title">
@@ -617,12 +617,12 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>0</hour>
+       <hour>21</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
        <month>12</month>
-       <day>31</day>
+       <day>30</day>
       </datetime>
      </property>
      <property name="displayFormat">
@@ -685,12 +685,12 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>0</hour>
+       <hour>21</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
        <month>12</month>
-       <day>31</day>
+       <day>30</day>
       </datetime>
      </property>
      <property name="displayFormat">
@@ -746,12 +746,12 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>0</hour>
+       <hour>21</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
        <month>12</month>
-       <day>31</day>
+       <day>30</day>
       </datetime>
      </property>
      <property name="maximumDate">
