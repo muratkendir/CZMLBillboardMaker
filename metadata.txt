@@ -23,7 +23,7 @@ hasProcessingProvider=no
 # changelog=
 
 # Tags are comma separated with spaces allowed
-tags=python czml cesium billboard
+tags=python czml cesium billboard GLTF
 
 homepage=https://github.com/muratkendir/CZMLBillboardMaker
 category=Web
