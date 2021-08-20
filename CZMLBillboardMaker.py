@@ -524,9 +524,9 @@ class CZMLBillboardMaker:
                     modelLines = modelLines + str(feature.attribute(selectedModelField))
                     modelLines = modelLines + '",\n            "nodeTransformations": {\n                "'
                     modelLines = modelLines + str(feature.attribute(selectedNodeField))
-                    modelLines = modelLines + '": {\n                    "rotation": {\n                        "unitQuaternion": [\n                            0.0, 0.0, '
-                    modelLines = modelLines + str(round(math.radians(feature.attribute(selectedAzimuthField)),4))
-                    modelLines = modelLines + ', 1.0\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
+                    modelLines = modelLines + '": {\n                    "rotation": {\n                        "unitQuaternion": [\n                            0.0, '
+                    modelLines = modelLines + str( round( ((math.radians(feature.attribute(selectedAzimuthField))/math.PI)*2),4) )
+                    modelLines = modelLines + ', 0.0 , 1.0\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
 
                 else:
                     modelLines=''
