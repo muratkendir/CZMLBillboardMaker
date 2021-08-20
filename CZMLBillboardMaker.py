@@ -263,6 +263,9 @@ class CZMLBillboardMaker:
         self.dlg.comboBoxName.clear()
         self.dlg.comboBoxId.clear()
         self.dlg.lineEditFileName.clear()
+        self.dlg.comboBoxModel.clear()
+        self.dlg.comboBoxAzimuth.clear()
+        self.dlg.comboBoxNode.clear()
 
     #Selecting filename for export czml file
     def browseForFileName(self):
@@ -286,6 +289,12 @@ class CZMLBillboardMaker:
             self.dlg.comboBoxModel.setDisabled(1)
             self.dlg.comboBoxAzimuth.setDisabled(1)
             self.dlg.comboBoxNode.setDisabled(1)
+            #Set Labels
+            self.dlg.labelText.setEnabled(1)
+            self.dlg.labelImage.setDisabled(1)
+            self.dlg.labelModel.setDisabled(1)
+            self.dlg.labelAzimuth.setDisabled(1)
+            self.dlg.labelNode.setDisabled(1)
         elif self.dlg.comboBoxBillboardType.currentText() == 'Only Images':
             #print("Only Images selected.")
             self.dlg.comboBoxText.setDisabled(1)
@@ -293,12 +302,24 @@ class CZMLBillboardMaker:
             self.dlg.comboBoxModel.setDisabled(1)
             self.dlg.comboBoxAzimuth.setDisabled(1)
             self.dlg.comboBoxNode.setDisabled(1)
+            #Set Labels
+            self.dlg.labelText.setDisabled(1)
+            self.dlg.labelImage.setEnabled(1)
+            self.dlg.labelModel.setDisabled(1)
+            self.dlg.labelAzimuth.setDisabled(1)
+            self.dlg.labelNode.setDisabled(1)
         elif self.dlg.comboBoxBillboardType.currentText() == 'Only 3D Models':
             self.dlg.comboBoxText.setDisabled(1)
             self.dlg.comboBoxImage.setDisabled(1)
             self.dlg.comboBoxModel.setEnabled(1)
             self.dlg.comboBoxAzimuth.setEnabled(1)
             self.dlg.comboBoxNode.setEnabled(1)
+            #Set Labels
+            self.dlg.labelText.setDisabled(1)
+            self.dlg.labelImage.setDisabled(1)
+            self.dlg.labelModel.setEnabled(1)
+            self.dlg.labelAzimuth.setEnabled(1)
+            self.dlg.labelNode.setEnabled(1)
         else:
             #print("Labels and Images selected.")
             self.dlg.comboBoxText.setEnabled(1)
@@ -306,6 +327,12 @@ class CZMLBillboardMaker:
             self.dlg.comboBoxModel.setDisabled(1)
             self.dlg.comboBoxAzimuth.setDisabled(1)
             self.dlg.comboBoxNode.setDisabled(1)
+            #Set Labels
+            self.dlg.labelText.setEnabled(1)
+            self.dlg.labelImage.setEnabled(1)
+            self.dlg.labelModel.setDisabled(1)
+            self.dlg.labelAzimuth.setDisabled(1)
+            self.dlg.labelNode.setDisabled(1)
 
     def checkClockButton(self):
         if self.dlg.radioButtonClockConf.isChecked():
@@ -328,10 +355,18 @@ class CZMLBillboardMaker:
             self.dlg.comboBoxTimeBeginning.setEnabled(1)
             self.dlg.comboBoxTimeEnd.setEnabled(1)
             self.dlg.comboBoxTimeZone.setEnabled(1)
+            #Set Labels
+            self.dlg.labelTimeBeginning.setEnabled(1)
+            self.dlg.labelTimeEnd.setEnabled(1)
+            self.dlg.labelTimeZone.setEnabled(1)
         else:
             self.dlg.comboBoxTimeBeginning.setDisabled(1)
             self.dlg.comboBoxTimeEnd.setDisabled(1)
             self.dlg.comboBoxTimeZone.setDisabled(1)
+            #Set Labels
+            self.dlg.labelTimeBeginning.setDisabled(1)
+            self.dlg.labelTimeEnd.setDisabled(1)
+            self.dlg.labelTimeZone.setDisabled(1)
 
     def run(self):
         """Run method that performs all the real work"""
@@ -350,8 +385,8 @@ class CZMLBillboardMaker:
             self.dlg.comboPointLayerNames.addItem('Select a point layer')
             self.dlg.comboPointLayerNames.addItems(self.getPointVectorLayers())
             #self.dlg.comboPointLayerNames.setCurrentText('Select a point layer')
-
         
+
         #Only Label / Only Image / Label + Image
         self.dlg.comboBoxBillboardType.currentIndexChanged.connect(self.checkBillboardType) 
 
@@ -456,10 +491,10 @@ class CZMLBillboardMaker:
             if self.dlg.radioButtonClockConf.isChecked():
                 documentClock = Metadata.Clock(selectedClockCurrentLocal, selectedClockBeginningLocal, selectedClockEndLocal, selectedClockMultiplier, selectedClockRange, selectedClockStep)
                 documentMetadata = Metadata("1.0", "document", layerName, documentClock)
-                print( json.dumps(documentMetadata.getMetaDict()) )
+                #print( json.dumps(documentMetadata.getMetaDict()) )
             else:
                 documentMetadata = Metadata("1.0", "document", layerName)
-                print( documentMetadata.getMetaDict() )
+                #print( documentMetadata.getMetaDict() )
 
             beginningLines ='[\n' +  json.dumps( documentMetadata.getMetaDict(), indent=4 )
             
@@ -522,11 +557,24 @@ class CZMLBillboardMaker:
                 if self.dlg.comboBoxModel.isEnabled() and self.dlg.comboBoxModel.currentText() != 'Not Selected':
                     modelLines = '        ,"model": {\n            "gltf" : "'
                     modelLines = modelLines + str(feature.attribute(selectedModelField))
-                    modelLines = modelLines + '",\n            "nodeTransformations": {\n                "'
+                    modelLines = modelLines + '"\n'
+                    if self.dlg.radioButtonSetupTime.isChecked():
+                        modelLines=modelLines + '            ,"interval":"'+beginningLocalDateTime+'/'+endLocalDateTime+'"\n'
+                    modelLines=modelLines + '            ,"nodeTransformations": {\n                "'
                     modelLines = modelLines + str(feature.attribute(selectedNodeField))
                     modelLines = modelLines + '": {\n                    "rotation": {\n                        "unitQuaternion": [\n                            0.0, '
-                    modelLines = modelLines + str( round( ((math.radians(feature.attribute(selectedAzimuthField))/math.PI)*2),4) )
-                    modelLines = modelLines + ', 0.0 , 1.0\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
+                    #Quaternion calculation
+                    rotationAngleZ = -math.radians(feature.attribute(selectedAzimuthField))
+                    #print(feature.attribute(selectedAzimuthField), " ", rotationAngleZ," <--angle\n")
+                    sinRotationAngleHalfZ = math.sin(rotationAngleZ/2)
+                    #print(sinRotationAngleHalfZ, " <--y value of quaternion\n")
+                    cosRotationAngleHalfZ = math.cos(rotationAngleZ/2)
+                    #print(cosRotationAngleHalfZ, " <--w value of quaternion\n\n")
+                    modelLines = modelLines + str( sinRotationAngleHalfZ )
+                    
+                    modelLines = modelLines + ', 0.0 , '
+                    modelLines = modelLines + str( cosRotationAngleHalfZ )
+                    modelLines = modelLines + '\n                        ]\n                    }\n                }\n            }\n            ,"minimumPixelSize": 24\n            ,"maximumScale": 10000\n        }\n'
 
                 else:
                     modelLines=''

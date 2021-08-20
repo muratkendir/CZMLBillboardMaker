@@ -119,6 +119,9 @@
      </property>
     </widget>
     <widget class="QLabel" name="labelTimeBeginning">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -142,6 +145,9 @@
      </property>
     </widget>
     <widget class="QLabel" name="labelTimeEnd">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>220</x>
@@ -287,7 +293,10 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLabel" name="labelTimeEnd_2">
+    <widget class="QLabel" name="labelTimeZone">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -517,6 +526,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxModel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -527,6 +539,9 @@
      </property>
     </widget>
     <widget class="QLabel" name="labelModel">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -540,6 +555,9 @@
      </property>
     </widget>
     <widget class="QLabel" name="labelAzimuth">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -553,6 +571,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxAzimuth">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -563,6 +584,9 @@
      </property>
     </widget>
     <widget class="QLabel" name="labelNode">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -576,6 +600,9 @@
      </property>
     </widget>
     <widget class="QComboBox" name="comboBoxNode">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -617,7 +644,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>21</hour>
+       <hour>18</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -685,7 +712,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>21</hour>
+       <hour>18</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -746,7 +773,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>21</hour>
+       <hour>18</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
