@@ -6,7 +6,7 @@
 name=CZML Billboard Maker
 qgisMinimumVersion=3.0
 description=Creates Billboards from a point vector layer.
-version=0.5
+version=0.6
 author=Murat Kendir
 email=muratkendir@gmail.com
 
@@ -29,7 +29,7 @@ homepage=https://github.com/muratkendir/CZMLBillboardMaker
 category=Web
 icon=icon.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False
