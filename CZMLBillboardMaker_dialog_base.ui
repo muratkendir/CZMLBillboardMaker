@@ -49,7 +49,7 @@
     <widget class="QLabel" name="labelDescription">
      <property name="geometry">
       <rect>
-       <x>109</x>
+       <x>19</x>
        <y>230</y>
        <width>121</width>
        <height>20</height>
@@ -137,7 +137,7 @@
     <widget class="QComboBox" name="comboBoxHeight">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>210</x>
        <y>252</y>
        <width>170</width>
        <height>25</height>
@@ -192,7 +192,7 @@
     <widget class="QLabel" name="labelImage_2">
      <property name="geometry">
       <rect>
-       <x>320</x>
+       <x>210</x>
        <y>230</y>
        <width>81</width>
        <height>20</height>
@@ -247,7 +247,7 @@
     <widget class="QComboBox" name="comboBoxDescription">
      <property name="geometry">
       <rect>
-       <x>109</x>
+       <x>19</x>
        <y>252</y>
        <width>170</width>
        <height>25</height>
@@ -369,6 +369,12 @@
      </property>
      <property name="text">
       <string>Add start and end times to features.</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QLabel" name="labelOptionalAttributes">
@@ -612,6 +618,19 @@
       </rect>
      </property>
     </widget>
+    <widget class="QCheckBox" name="checkBoxSavePreview">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>250</y>
+       <width>121</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Preview</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="tabClock">
     <attribute name="title">
@@ -644,7 +663,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>18</hour>
+       <hour>16</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -712,7 +731,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>18</hour>
+       <hour>16</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>
@@ -773,7 +792,7 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>18</hour>
+       <hour>16</hour>
        <minute>0</minute>
        <second>0</second>
        <year>2020</year>

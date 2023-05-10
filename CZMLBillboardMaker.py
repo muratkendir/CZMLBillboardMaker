@@ -33,6 +33,7 @@ from pytz import timezone
 import pytz
 #Local/ sources
 from .Metadata import Metadata
+from .cesiumPreview import *
 # Initialize Qt resources from file resources.py
 from .resources import *
 # Import the code for the dialog
@@ -368,6 +369,12 @@ class CZMLBillboardMaker:
             self.dlg.labelTimeEnd.setDisabled(1)
             self.dlg.labelTimeZone.setDisabled(1)
 
+    def checkPreview(self):
+        if self.dlg.checkBoxSavePreview.isChecked():
+            return True
+        else:
+            return False
+
     def run(self):
         """Run method that performs all the real work"""
         
@@ -401,6 +408,8 @@ class CZMLBillboardMaker:
 
         #Clear All Button
         self.dlg.pushButtonClearAll.clicked.connect(self.clearAll)
+
+        self.dlg.checkBoxSavePreview.clicked.connect(self.checkPreview)
         
         
         
@@ -530,7 +539,7 @@ class CZMLBillboardMaker:
                     labelLines = labelLines + '",\n'
                     if self.dlg.radioButtonSetupTime.isChecked():
                         labelLines = labelLines + '            "interval": "'+beginningLocalDateTime+'/'+endLocalDateTime+'",\n'
-                    labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "scaleByDistance": { "nearFarScalar": [300,5,3000,1] },\n            "disableDepthTestDistance": 9999999999,\n            "outlineWidth": 3,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        }\n'
+                    labelLines = labelLines + '            "fillColor": {"rgba": [255,255,255,255]},\n            "scaleByDistance": { "nearFarScalar": [150,3,3000,1] },\n            "disableDepthTestDistance": 9999999999,\n            "outlineWidth": 3,\n            "outlineColor": {"rgba": [0, 0, 0, 255]}, \n            "style": "FILL_AND_OUTLINE", \n            "heightReference": "RELATIVE_TO_GROUND"\n        }\n'
                 else:
                     #labelLines = '        ,"commentAboutLabels" : "Skipped"\n'  
                     labelLines = ' '
@@ -598,4 +607,16 @@ class CZMLBillboardMaker:
             exportedFile.write(wholeDocument)
             exportedFile.close()
 
+            # Write Preview File
+            if self.checkPreview():
+                folderURL = (self.dlg.lineEditFileName.text()).rsplit(os.path.sep, 1)[0]
+                czmlFileURL = (self.dlg.lineEditFileName.text()).rsplit(os.path.sep, 1)[1]
+                #print(folderURL, czmlFileURL)
+                previewURL = folderURL + os.path.sep + 'preview.html'
+                previewFile = open(previewURL, mode='w', encoding='utf-8')
+                cesiumFile = getCesiumPreview(wholeDocument)
+                previewFile.write(cesiumFile)
+                previewFile.close()
+            else:
+                print("Some problem occured about radioButtonSavePreview")
             pass
