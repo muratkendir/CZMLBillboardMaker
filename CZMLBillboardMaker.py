@@ -31,6 +31,7 @@ import json
 import math
 from pytz import timezone
 import pytz
+from pathlib import Path
 #Local/ sources
 from .Metadata import Metadata
 from .cesiumPreview import *
@@ -609,14 +610,18 @@ class CZMLBillboardMaker:
 
             # Write Preview File
             if self.checkPreview():
-                folderURL = (self.dlg.lineEditFileName.text()).rsplit(os.path.sep, 1)[0]
-                czmlFileURL = (self.dlg.lineEditFileName.text()).rsplit(os.path.sep, 1)[1]
-                #print(folderURL, czmlFileURL)
-                previewURL = folderURL + os.path.sep + 'preview.html'
+                temp_file_name = self.dlg.lineEditFileName.text()
+                pathified = Path(temp_file_name)
+                
+                folderURL = os.path.dirname(pathified)
+                czmlFileURL = os.path.basename(pathified)
+                print('temp_file_name : ', temp_file_name, '\n','pathified : ', pathified, '\n', 'folderURL : ', folderURL, '\n', 'czmlFileURL : ', czmlFileURL)
+                previewURL = os.path.join(folderURL, 'preview.html')
                 previewFile = open(previewURL, mode='w', encoding='utf-8')
                 cesiumFile = getCesiumPreview(wholeDocument)
                 previewFile.write(cesiumFile)
                 previewFile.close()
+                webbrowser.open(previewURL)
             else:
                 print("Some problem occured about radioButtonSavePreview")
             pass
