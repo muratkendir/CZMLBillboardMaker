@@ -46,3 +46,4 @@ Category of the plugin: Raster, Vector, Database or Web
 server=False
 
 supportsQt6=True
+qgisMaximumVersion=4.99

@@ -3,14 +3,13 @@ def getCesiumPreview(wholeDocument):
 <html lang="en">\
 <head>\
   <meta charset="utf-8">\
-  <script src="https://cesium.com/downloads/cesiumjs/releases/1.100/Build/Cesium/Cesium.js"></script>\
-  <link href="https://cesium.com/downloads/cesiumjs/releases/1.100/Build/Cesium/Widgets/widgets.css" rel="stylesheet">\
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.140/Build/Cesium/Cesium.js"></script>\
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.140/Build/Cesium/Widgets/widgets.css" rel="stylesheet">\
 </head>\
 <body>\
   <div id="cesiumContainer"></div>\
   <script>\
     const viewer = new Cesium.Viewer(\'cesiumContainer\', {\
-      imageryProvider : new Cesium.OpenStreetMapImageryProvider({ url : \'https://a.tile.openstreetmap.org/\' }),\
       fullscreenButton:true });\
     czmlObject = ' + wholeDocument + ';'
   string2 = 'var dataSourcePromise = Cesium.CzmlDataSource.load(czmlObject);\
